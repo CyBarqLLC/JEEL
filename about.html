@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Jeel Wellness, a collagen-first wellness brand offering innovative products crafted with premium collagen and carefully selected ingredients." />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Jeel Wellness جيل ويلنس</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jeel Wellness" />
+  <meta property="og:title" content="Jeel Wellness جيل ويلنس" />
+  <meta property="og:description" content="Discover Jeel Wellness, a collagen-first wellness brand offering innovative products crafted with premium collagen and carefully selected ingredients." />
+  <meta property="og:image" content="https://jeelwellness.com/jeel wellness logo.svg" />
+  <meta property="og:url" content="https://jeelwellness.com/about.html" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jeel Wellness جيل ويلنس" />
+  <meta name="twitter:description" content="Discover Jeel Wellness, a collagen-first wellness brand offering innovative products crafted with premium collagen and carefully selected ingredients." />
+  <meta name="twitter:image" content="https://jeelwellness.com/jeel wellness logo.svg" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ══════════════════════════════════
+       ABOUT PAGE — Premium Story Layout
+    ══════════════════════════════════ */
+
+    .about-page {
+      background: var(--c-white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Hero Banner ── */
+    .about-hero {
+      position: relative;
+      min-height: 62vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(158deg, #ffffff 0%, #f2f9fc 44%, rgba(170,220,234,0.15) 100%);
+      padding: calc(var(--nav-h) + 64px) 24px 80px;
+    }
+    .about-hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 68% 55% at 58% 40%, rgba(170,220,234,0.18) 0%, transparent 72%),
+        radial-gradient(ellipse 44% 35% at 14% 72%, rgba(170,220,234,0.11) 0%, transparent 60%),
+        radial-gradient(ellipse 36% 28% at 84% 74%, rgba(123,185,208,0.08) 0%, transparent 60%);
+    }
+    .about-hero-leaf {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.08;
+    }
+    .about-hero-leaf.ahl1 { width: clamp(260px,32vw,480px); top: -80px; right: -80px; transform: rotate(18deg); }
+    .about-hero-leaf.ahl2 { width: clamp(180px,22vw,320px); bottom: -60px; left: -50px; transform: rotate(-22deg); }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .about-hero-label {
+      display: inline-block;
+      font-size: clamp(20px, 2.5vw, 34px);
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.35);
+      margin-bottom: 28px;
+    }
+    .about-hero-title {
+      font-size: var(--fs-title);
+      font-weight: var(--fw-title);
+      line-height: var(--lh-title);
+      letter-spacing: var(--ls-title);
+      color: var(--c-black);
+      margin-bottom: 32px;
+    }
+    .about-hero-sub {
+      font-size: clamp(17px, 2.2vw, 22px);
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(0,0,0,0.55);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    body.lang-ar .about-hero-title,
+    body.lang-ar .about-hero-sub,
+    body.lang-ar .about-hero-label {
+      font-family: var(--font-ar);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    /* ── Content Layout ── */
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(64px,10vw,140px) 24px;
+    }
+
+    /* ── Chapter Blocks ── */
+    .chapter {
+      margin-bottom: clamp(72px, 11vw, 130px);
+      position: relative;
+    }
+
+    .chapter-number {
+      display: block;
+      font-size: clamp(20px, 2.5vw, 34px);
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--c-primary);
+      margin-bottom: 20px;
+    }
+
+    .chapter-title {
+      font-size: clamp(26px, 3.8vw, 48px);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--c-black);
+      margin-bottom: 28px;
+    }
+
+    .chapter-body {
+      font-size: clamp(19px, 2.2vw, 25px);
+      font-weight: 300;
+      line-height: 1.80;
+      color: rgba(0,0,0,0.60);
+      max-width: 720px;
+    }
+    .chapter-body + .chapter-body { margin-top: 22px; }
+
+    body.lang-ar .chapter-title,
+    body.lang-ar .chapter-body,
+    body.lang-ar .chapter-number {
+      font-family: var(--font-ar);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .about-block[data-lang="ar"] .chapter { text-align: right; }
+    .about-block[data-lang="ar"] .chapter-body { margin-left: auto; margin-right: 0; }
+
+    /* ── Collagen Manifesto Card ── */
+    .manifesto-card {
+      margin: clamp(56px, 8vw, 100px) 0;
+      padding: clamp(48px, 7vw, 88px) clamp(36px, 6vw, 80px);
+      background: linear-gradient(148deg,
+        rgba(170,220,234,0.12) 0%,
+        rgba(255,255,255,0.90) 50%,
+        rgba(170,220,234,0.09) 100%
+      );
+      border: 1px solid rgba(170,220,234,0.30);
+      border-radius: 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 12px 64px rgba(170,220,234,0.10);
+    }
+    .manifesto-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--c-primary), #7bb9d0);
+      border-radius: 0 3px 3px 0;
+    }
+    .about-block[data-lang="ar"] .manifesto-card::before {
+      left: auto; right: 0; border-radius: 3px 0 0 3px;
+    }
+    .manifesto-card::after {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(170,220,234,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .manifesto-label {
+      display: block;
+      font-size: clamp(20px, 2.4vw, 32px);
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--c-primary);
+      margin-bottom: 20px;
+    }
+    .manifesto-text {
+      font-size: clamp(20px, 2.8vw, 32px);
+      font-weight: 300;
+      line-height: 1.65;
+      letter-spacing: -0.015em;
+      color: var(--c-black);
+    }
+    body.lang-ar .manifesto-text,
+    body.lang-ar .manifesto-label {
+      font-family: var(--font-ar);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .about-block[data-lang="ar"] .manifesto-card { text-align: right; }
+
+    /* ── Values Grid ── */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin: clamp(40px, 6vw, 72px) 0;
+    }
+    .value-card {
+      padding: 28px 24px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(170,220,234,0.22);
+      border-radius: 20px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s;
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 48px rgba(170,220,234,0.22), 0 0 0 1px rgba(170,220,234,0.38);
+    }
+    .value-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+    .vd-blue   { background: var(--c-primary); }
+    .vd-pink   { background: var(--c-pink); }
+    .vd-yellow { background: var(--c-yellow); }
+    .value-title {
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--c-black);
+      margin-bottom: 10px;
+    }
+    .value-desc {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: rgba(0,0,0,0.55);
+    }
+    body.lang-ar .value-title,
+    body.lang-ar .value-desc {
+      font-family: var(--font-ar);
+      letter-spacing: 0;
+    }
+    .about-block[data-lang="ar"] .value-card { text-align: right; }
+
+    /* ── CTA Block ── */
+    .about-cta-block {
+      text-align: center;
+      padding: clamp(48px, 7vw, 88px) 0 clamp(32px, 5vw, 56px);
+      border-top: 1px solid rgba(170,220,234,0.20);
+    }
+    .about-cta-block p {
+      font-size: clamp(19px, 2.4vw, 24px);
+      font-weight: 300;
+      color: rgba(0,0,0,0.50);
+      margin-bottom: 28px;
+    }
+    body.lang-ar .about-cta-block p { font-family: var(--font-ar); }
+
+    /* ── Divider ornament ── */
+    .section-ornament {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: clamp(56px, 8vw, 96px) 0;
+    }
+    .ornament-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(170,220,234,0.35), transparent);
+    }
+    .ornament-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--c-primary);
+      opacity: 0.5;
+    }
+
+    /* Reveal animations reuse global .reveal class */
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .manifesto-card { padding: 32px 24px; }
+      .about-hero-leaf { display: none; }
+    }
+  </style>
+</head>
+<body class="about-page">
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="jeel wellness logo.svg" alt="Jeel Wellness" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="index.html#about" data-en="Why Jeel?" data-ar="لماذا جيل؟">Why Jeel?</a></li>
+        <li><a href="about.html" data-en="Our Story" data-ar="قصتنا">Our Story</a></li>
+        <li><a href="index.html#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+        <li>
+          <a href="https://store.jeelwellness.com" target="_blank" class="nav-store-btn" data-en="Shop Our Products" data-ar="تسوّق منتجاتنا">
+            Shop Our Products
+          </a>
+        </li>
+        <li class="nav-social-li" aria-label="Follow us">
+          <div class="nav-social-row">
+            <a href="https://www.instagram.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Facebook" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/jeelwellnessco/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.x.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="X / Twitter" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-switcher" id="langSwitcher" aria-label="Switch language">
+          <span class="lang-thumb" aria-hidden="true"></span>
+          <span class="lang-en active">EN</span>
+          <span class="lang-ar">ع</span>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="about-hero">
+    <div class="about-hero-bg"></div>
+    <img src="leaf-blue.svg"   class="about-hero-leaf ahl1" alt="" aria-hidden="true" />
+    <img src="leaf-yellow.svg" class="about-hero-leaf ahl2" alt="" aria-hidden="true" />
+
+    <div class="about-hero-inner">
+      <!-- English -->
+      <div data-lang="en">
+        <span class="about-hero-label">Our Story</span>
+        <h1 class="about-hero-title">Where science<br/>meets <span class="ab2-key">care.</span></h1>
+        <p class="about-hero-sub">JEEL was built around a single conviction — that collagen is not an ingredient to add. It is the foundation everything starts from.</p>
+      </div>
+      <!-- Arabic -->
+      <div class="hidden" data-lang="ar">
+        <span class="about-hero-label">قصتنا</span>
+        <h1 class="about-hero-title">حيث يلتقي العلم<br/><span class="ab2-key">بالعناية.</span></h1>
+        <p class="about-hero-sub">بُني جيل على قناعة واحدة — الكولاجين ليس مكوّنًا يُضاف. إنه الأساس الذي ينطلق منه كل شيء.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STORY CONTENT ═══ -->
+  <main class="about-content">
+
+    <!-- English Block -->
+    <div class="about-block" data-lang="en">
+
+      <!-- 01 · The Beginning -->
+      <div class="ab2-ch reveal">
+        <span class="ab2-num">01</span>
+        <h2 class="ab2-display" data-wordfx>We started with a <span class="ab2-key">question.</span></h2>
+      </div>
+
+      <div class="ab2-ch reveal">
+        <div class="ab2-quote-wrap">
+          <div class="ab2-qline" aria-hidden="true"></div>
+          <p class="ab2-quote" data-wordfx>Why should everyday care be complicated?</p>
+          <div class="ab2-qline ab2-qline-r" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="ab2-ch reveal">
+        <p class="ab2-intro" data-wordfx>Many products ask people to change their habits. We believe a good product should fit into your life <span class="ab2-chip chip-blue">as it is.</span> That is where Jeel began.</p>
+      </div>
+
+      <!-- ✦ The Jeel Principle — interactive collagen card -->
+      <div class="ab2-ch ab2-ch3 reveal">
+        <div class="about-collagen cc2" data-tilt>
+          <div class="cc2-border" aria-hidden="true"></div>
+          <div class="cc2-sheen" aria-hidden="true"></div>
+          <div class="cc-shine" aria-hidden="true"></div>
+          <div class="cc2-bubbles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="cc-leaf cc-leaf-1" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+          <div class="cc-leaf cc-leaf-2" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+          <div class="cc-leaf cc-leaf-3" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+          <div class="cc2-depth">
+            <div class="cc2-emblem" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <p class="collagen-statement">Collagen is not an added ingredient in our products.<br/>It is the starting point behind every Jeel creation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 · The Range -->
+      <div class="ab2-ch reveal">
+        <span class="ab2-num">02</span>
+        <h2 class="ab2-display" data-wordfx>Different products. <span class="ab2-key">One idea.</span></h2>
+        <p class="ab2-intro ab2-lede" data-wordfx>From skin and hair to daily wellness — every Jeel product plays its own role, sharing one philosophy: care that is simple, enjoyable and easy to keep.</p>
+      </div>
+
+      <div class="ab2-ch reveal">
+        <div class="ab2-cards ab2-cards-4">
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div>
+              <p>Skin Health</p>
+              <p class="ab2-card-desc">Elasticity, luminosity and daily renewal from within.</p>
+            </div>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-pink.svg" alt="" /></div>
+            <div>
+              <p>Hair Nourishment</p>
+              <p class="ab2-card-desc">Strength and vitality that starts at the root.</p>
+            </div>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-yellow.svg" alt="" /></div>
+            <div>
+              <p>Vitality &amp; Energy</p>
+              <p class="ab2-card-desc">Daily wellness that sustains an active life.</p>
+            </div>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div>
+              <p>Collagen Science</p>
+              <p class="ab2-card-desc">Every formula built on the body's own foundation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 · The Philosophy -->
+      <div class="ab2-ch reveal">
+        <span class="ab2-num">03</span>
+        <h2 class="ab2-display" data-wordfx>Care should be <span class="ab2-key">effortless.</span></h2>
+        <p class="ab2-intro ab2-lede" data-wordfx>The best products are not the most complex — they are the ones that find their natural place in your day.</p>
+      </div>
+
+      <div class="ab2-ch reveal about-cta-block">
+        <a href="https://store.jeelwellness.com" target="_blank" class="hero-cta" style="opacity:1;transform:none;">
+          Shop Our Products
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Arabic Block -->
+    <div class="about-block hidden" data-lang="ar">
+
+      <!-- 01 · البداية -->
+      <div class="ab2-ch reveal">
+        <span class="ab2-num">01</span>
+        <h2 class="ab2-display" data-wordfx>بدأنا من <span class="ab2-key">سؤالٍ بسيط.</span></h2>
+      </div>
+
+      <div class="ab2-ch reveal">
+        <div class="ab2-quote-wrap">
+          <div class="ab2-qline" aria-hidden="true"></div>
+          <p class="ab2-quote" data-wordfx>لماذا تبدو العناية اليومية معقدة أكثر مما يجب؟</p>
+          <div class="ab2-qline ab2-qline-r" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="ab2-ch reveal">
+        <p class="ab2-intro" data-wordfx>كثير من المنتجات تطلب من الناس تغيير عاداتهم، بينما نؤمن أن المنتج الجيد ينسجم مع حياتك <span class="ab2-chip chip-blue">كما هي.</span> من هنا بدأت رحلة جيل.</p>
+      </div>
+
+      <!-- ✦ مبدأ جيل — بطاقة الكولاجين التفاعلية -->
+      <div class="ab2-ch ab2-ch3 reveal">
+        <div class="about-collagen cc2" data-tilt>
+          <div class="cc2-border" aria-hidden="true"></div>
+          <div class="cc2-sheen" aria-hidden="true"></div>
+          <div class="cc-shine" aria-hidden="true"></div>
+          <div class="cc2-bubbles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="cc-leaf cc-leaf-1" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+          <div class="cc-leaf cc-leaf-2" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+          <div class="cc-leaf cc-leaf-3" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+          <div class="cc2-depth">
+            <div class="cc2-emblem" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <p class="collagen-statement">الكولاجين ليس مكوّنًا إضافيًا في منتجاتنا.<br/>بل العنصر الذي تبدأ منه ابتكارات جيل.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 · المجموعة -->
+      <div class="ab2-ch reveal">
+        <span class="ab2-num">02</span>
+        <h2 class="ab2-display" data-wordfx>منتجات مختلفة. <span class="ab2-key">فكرة واحدة.</span></h2>
+        <p class="ab2-intro ab2-lede" data-wordfx>من العناية بالبشرة والشعر إلى العافية اليومية — كل منتج في جيل يؤدي دوره الخاص، وتجمعها فلسفة واحدة: عناية بسيطة وممتعة وسهلة الاستمرار.</p>
+      </div>
+
+      <div class="ab2-ch reveal">
+        <div class="ab2-cards ab2-cards-4">
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div>
+              <p>صحة البشرة</p>
+              <p class="ab2-card-desc">مرونة وإشراق وتجدد يومي من الداخل.</p>
+            </div>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-pink.svg" alt="" /></div>
+            <div>
+              <p>تغذية الشعر</p>
+              <p class="ab2-card-desc">قوة وحيوية تبدأ من الجذر.</p>
+            </div>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-yellow.svg" alt="" /></div>
+            <div>
+              <p>الحيوية والطاقة</p>
+              <p class="ab2-card-desc">عافية يومية تدعم حياة نشطة.</p>
+            </div>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div>
+              <p>علم الكولاجين</p>
+              <p class="ab2-card-desc">كل تركيبة مبنية على أساس الجسم نفسه.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 · الفلسفة -->
+      <div class="ab2-ch reveal">
+        <span class="ab2-num">03</span>
+        <h2 class="ab2-display" data-wordfx>العناية يجب أن تكون <span class="ab2-key">سهلة.</span></h2>
+        <p class="ab2-intro ab2-lede" data-wordfx>أفضل المنتجات ليست الأكثر تعقيدًا — بل تلك التي تجد مكانها الطبيعي في يومك.</p>
+      </div>
+
+      <div class="ab2-ch reveal about-cta-block">
+        <a href="https://store.jeelwellness.com" target="_blank" class="hero-cta" style="opacity:1;transform:none;">
+          تسوّق منتجاتنا
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ═══ JORDAN MADE ═══ -->
+  <section class="jordan-made" aria-label="Jordan Made">
+
+    <!-- English -->
+    <div class="jordan-made-inner reveal" data-lang="en">
+      <img src="JordanMade.svg" alt="Jordan Made" class="jordan-made-seal" />
+      <div class="jordan-made-rule"></div>
+      <h2 class="jordan-made-heading">From Jordan to the World.</h2>
+      <p class="jordan-made-body">Exceptional collagen and thoughtfully sourced ingredients behind every Jeel creation.</p>
+    </div>
+
+    <!-- Arabic -->
+    <div class="jordan-made-inner reveal hidden" data-lang="ar">
+      <img src="JordanMade.svg" alt="Jordan Made" class="jordan-made-seal" />
+      <div class="jordan-made-rule"></div>
+      <h2 class="jordan-made-heading">من الأردن إلى العالم.</h2>
+      <p class="jordan-made-body">كولاجين فاخر ومكونات منتقاة بعناية في كل ابتكار من ابتكارات جيل.</p>
+    </div>
+
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <!-- Decorative leaves -->
+    <span class="footer-leaf footer-leaf-1" aria-hidden="true"><img src="leaf-blue.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-2" aria-hidden="true"><img src="leaf-pink.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-3" aria-hidden="true"><img src="leaf-yellow.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-4" aria-hidden="true"><img src="leaf-blue.svg" alt=""></span>
+
+    <div class="footer-inner">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="jeel wellness logo.svg" alt="Jeel Wellness" class="footer-logo" />
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/jeelwellnessco/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.x.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="X / Twitter" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-mid">
+        <div class="footer-contact-info">
+          <span class="footer-contact-label" data-en="For international inquiries and distribution partnerships" data-ar="للتواصل من جميع أنحاء العالم عبر الرقم التالي">For international inquiries and distribution partnerships</span>
+          <a href="tel:+00962777700018" class="footer-phone">+00962 777 700 018</a>
+        </div>
+        <div class="footer-payment">
+          <img src="payment methods.svg" alt="Accepted payment methods" class="payment-img" />
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" data-en="© 2026 Jeel Wellness. All rights reserved." data-ar="© ٢٠٢٦ جيل ويلنس. جميع الحقوق محفوظة.">© 2026 Jeel Wellness. All rights reserved.</p>
+        <a href="https://store.jeelwellness.com" target="_blank" class="footer-store-link" data-en="Visit Store →" data-ar="زيارة المتجر →">Visit Store →</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

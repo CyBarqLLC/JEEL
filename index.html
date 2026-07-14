@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Jeel Wellness, a collagen-first wellness brand offering innovative products crafted with premium collagen and carefully selected ingredients." />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Jeel Wellness جيل ويلنس</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jeel Wellness" />
+  <meta property="og:title" content="Jeel Wellness جيل ويلنس" />
+  <meta property="og:description" content="Discover Jeel Wellness, a collagen-first wellness brand offering innovative products crafted with premium collagen and carefully selected ingredients." />
+  <meta property="og:image" content="https://jeelwellness.com/jeel wellness logo.svg" />
+  <meta property="og:url" content="https://jeelwellness.com/" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jeel Wellness جيل ويلنس" />
+  <meta name="twitter:description" content="Discover Jeel Wellness, a collagen-first wellness brand offering innovative products crafted with premium collagen and carefully selected ingredients." />
+  <meta name="twitter:image" content="https://jeelwellness.com/jeel wellness logo.svg" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="jeel wellness logo.svg" alt="Jeel Wellness" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="#about" data-en="Why Jeel?" data-ar="لماذا جيل؟">Why Jeel?</a></li>
+        <li><a href="about.html" data-en="Our Story" data-ar="قصتنا">Our Story</a></li>
+        <li><a href="contact.html" data-en="Contact" data-ar="تواصل">Contact</a></li>
+        <li class="nav-cta-li">
+          <a href="https://store.jeelwellness.com" target="_blank" class="nav-store-btn" data-en="Shop Our Products" data-ar="تسوّق منتجاتنا">
+            Shop Our Products
+          </a>
+        </li>
+        <li class="nav-social-li" aria-label="Follow us">
+          <div class="nav-social-row">
+            <a href="https://www.instagram.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Facebook" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/jeelwellnessco/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.x.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="X / Twitter" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-switcher" id="langSwitcher" aria-label="Switch language">
+          <span class="lang-thumb" aria-hidden="true"></span>
+          <span class="lang-en active">EN</span>
+          <span class="lang-ar">ع</span>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-gradient"></div>
+
+    <!-- Floating leaf particles -->
+    <div class="hero-leaves" id="heroLeaves"></div>
+
+    <!-- Product float stage -->
+    <div class="hero-products" id="heroProducts">
+      <div class="product-float p1" data-depth="0.04">
+        <img src="JEEL_SERUM PNG.png" alt="" draggable="false" />
+      </div>
+      <div class="product-float p2" data-depth="0.07">
+        <img src="JEEL_DRINK PNG.png" alt="" draggable="false" />
+      </div>
+      <div class="product-float p3" data-depth="0.05">
+        <img src="JEEL_CREAM PNG.png" alt="" draggable="false" />
+      </div>
+      <div class="product-float p4" data-depth="0.03">
+        <img src="JEEL_SERUM 02 PNG.png" alt="" draggable="false" />
+      </div>
+      <div class="product-float p5" data-depth="0.06">
+        <img src="JEEL_CREAM 02 PNG_.png" alt="" draggable="false" />
+      </div>
+    </div>
+
+    <!-- Hero copy -->
+    <div class="hero-copy">
+
+      <!-- English version -->
+      <div class="hero-tagline-en" data-lang="en">
+        <div class="hero-headline-wrap">
+          <span class="hero-headline hero-line l1">The Complete<br/>Collagen World</span>
+          <div class="hero-headline-glow" aria-hidden="true"></div>
+        </div>
+        <p class="hero-subtitle hero-line l2">Everything We Create Begins with Collagen</p>
+      </div>
+
+      <!-- Arabic version -->
+      <div class="hero-tagline-ar hidden" data-lang="ar">
+        <div class="hero-headline-wrap">
+          <span class="hero-headline hero-line l1">عالم الكولاجين المتكامل</span>
+          <div class="hero-headline-glow" aria-hidden="true"></div>
+        </div>
+        <p class="hero-subtitle hero-line l2">كل ما نبتكره.. يبدأ بالكولاجين</p>
+      </div>
+
+      <a href="https://store.jeelwellness.com" target="_blank" class="hero-cta" data-en="Shop Our Products" data-ar="تسوّق منتجاتنا">
+        Shop Our Products
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ═══ ABOUT / BRAND STORY ═══ -->
+  <section class="about" id="about">
+
+    <!-- ── Decorative background elements ── -->
+    <div class="about-deco-product about-deco-p1" aria-hidden="true">
+      <img src="JEEL_SERUM PNG.png" alt="" draggable="false" />
+    </div>
+    <div class="about-deco-product about-deco-p2" aria-hidden="true">
+      <img src="JEEL_CREAM PNG.png" alt="" draggable="false" />
+    </div>
+    <div class="about-leaf-bg about-leaf-bg-1" aria-hidden="true">
+      <img src="leaf-blue.svg" alt="" />
+    </div>
+    <div class="about-leaf-bg about-leaf-bg-2" aria-hidden="true">
+      <img src="leaf-pink.svg" alt="" />
+    </div>
+    <div class="about-leaf-bg about-leaf-bg-3" aria-hidden="true">
+      <img src="leaf-yellow.svg" alt="" />
+    </div>
+
+    <div class="about-inner">
+
+      <!-- ── English ── -->
+      <div class="about-block" data-lang="en">
+
+        <!-- 01 · Opening statement — word-by-word -->
+        <div class="ab2-ch ab2-ch1 reveal">
+          <span class="ab2-num">01</span>
+          <h3 class="ab2-display" data-wordfx><span class="ab2-key">Wellness,</span> made to stay with you.</h3>        </div>
+
+        <!-- 02 · Intro with interactive keyword chips -->
+        <div class="ab2-ch ab2-ch2 reveal">
+          <span class="ab2-num">02</span>
+          <p class="ab2-intro" data-wordfx>At Jeel, we create wellness products inspired by <span class="ab2-chip chip-pink">beauty,</span> <span class="ab2-chip chip-blue">purity,</span> and everyday <span class="ab2-chip chip-yellow">well-being</span> that naturally stays with you.</p>
+        </div>
+
+        <!-- ✦ Collagen centerpiece — tilt + cursor shine -->
+        <div class="ab2-ch ab2-ch3 reveal">
+          <div class="about-collagen cc2" data-tilt>
+            <div class="cc2-border" aria-hidden="true"></div>
+            <div class="cc2-sheen" aria-hidden="true"></div>
+            <div class="cc-shine" aria-hidden="true"></div>
+            <div class="cc2-bubbles" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="cc-leaf cc-leaf-1" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-2" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-3" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-4" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-5" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc2-depth">
+              <div class="cc2-emblem" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+              <p class="collagen-statement">Collagen is not an added ingredient in our products.<br/>It is the starting point behind every Jeel creation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 · Closing — ritual cards -->
+        <div class="ab2-ch ab2-ch5 reveal">
+          <span class="ab2-num">03</span>
+          <p class="ab2-close-head" data-wordfx>Jeel is a modern approach to everyday care.</p>
+          <div class="ab2-cards">
+            <div class="ab2-card">
+              <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+              <p>Created with simplicity</p>
+            </div>
+            <div class="ab2-card">
+              <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-pink.svg" alt="" /></div>
+              <p>Effortless to use</p>
+            </div>
+            <div class="ab2-card">
+              <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-yellow.svg" alt="" /></div>
+              <p>Naturally part of your day</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Arabic ── -->
+      <div class="about-block hidden" data-lang="ar">
+
+        <!-- 01 · الافتتاحية — كلمة كلمة -->
+        <div class="ab2-ch ab2-ch1 reveal">
+          <span class="ab2-num">01</span>
+          <h3 class="ab2-display" data-wordfx><span class="ab2-key">العافية…</span> حين تصبح رفيقةً ليومك.</h3>        </div>
+
+        <!-- 02 · التعريف مع كلمات تفاعلية -->
+        <div class="ab2-ch ab2-ch2 reveal">
+          <span class="ab2-num">02</span>
+          <p class="ab2-intro" data-wordfx>في جيل، نبتكر منتجات عافية ترتبط <span class="ab2-chip chip-pink">بالجمال،</span> <span class="ab2-chip chip-blue">والنقاء،</span> والإحساس <span class="ab2-chip chip-yellow">بالعافية</span> الذي يرافقكِ بهدوء كل يوم.</p>
+        </div>
+
+        <!-- ✦ بطاقة الكولاجين — إمالة ولمعة تتبع المؤشر -->
+        <div class="ab2-ch ab2-ch3 reveal">
+          <div class="about-collagen cc2" data-tilt>
+            <div class="cc2-border" aria-hidden="true"></div>
+            <div class="cc2-sheen" aria-hidden="true"></div>
+            <div class="cc-shine" aria-hidden="true"></div>
+            <div class="cc2-bubbles" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="cc-leaf cc-leaf-1" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-2" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-3" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-4" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc-leaf cc-leaf-5" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <div class="cc2-depth">
+              <div class="cc2-emblem" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+              <p class="collagen-statement">الكولاجين ليس مكوّنًا إضافيًا في منتجاتنا.<br/>بل العنصر الذي تبدأ منه ابتكارات جيل.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 · الختام — بطاقات الروتين -->
+        <div class="ab2-ch ab2-ch5 reveal">
+          <span class="ab2-num">03</span>
+          <p class="ab2-close-head" data-wordfx>جيل مساحة للعناية الحديثة.</p>
+          <div class="ab2-cards">
+            <div class="ab2-card">
+              <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+              <p>تُصنع بهدوء</p>
+            </div>
+            <div class="ab2-card">
+              <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-pink.svg" alt="" /></div>
+              <p>تُستخدم بسهولة</p>
+            </div>
+            <div class="ab2-card">
+              <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-yellow.svg" alt="" /></div>
+              <p>جزء طبيعي ثابت من يومك</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ VIDEO INTRO HEADING ═══ -->
+  <section class="video-intro-section">
+    <div class="vi-inner">
+      <h2 class="vi-title">
+        <span data-lang="en">Loved By Everyone</span>
+        <span class="hidden" data-lang="ar"><span class="vi-word-gradient">الجميع</span> أحبّها</span>
+      </h2>
+      <p class="vi-subtitle">
+        <span data-lang="en">From everyday wellness lovers to beauty-focused lifestyles, Jeel became part of routines around the world.</span>
+        <span class="hidden" data-lang="ar">من محبّي العافية اليومية إلى عشّاق الجمال والعناية، أصبحت جيل جزءًا من الروتين اليومي للكثيرين حول العالم.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ VIDEO STRIP ═══ -->
+  <section class="video-strip-section">
+    <div class="video-strip-wrapper">
+      <div class="video-strip" id="videoStrip">
+
+        <!-- Set A -->
+        <div class="video-card-wrap vc1">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid01.mov" type="video/quicktime" />
+              <source src="jeelvid01.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc2">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid02.mov" type="video/quicktime" />
+              <source src="jeelvid02.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc3">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid03.mov" type="video/quicktime" />
+              <source src="jeelvid03.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc4">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid04.mov" type="video/quicktime" />
+              <source src="jeelvid04.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc5">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid05.mov" type="video/quicktime" />
+              <source src="jeelvid05.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <!-- Set B — seamless clone -->
+        <div class="video-card-wrap vc1">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid01.mov" type="video/quicktime" />
+              <source src="jeelvid01.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc2">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid02.mov" type="video/quicktime" />
+              <source src="jeelvid02.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc3">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid03.mov" type="video/quicktime" />
+              <source src="jeelvid03.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc4">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid04.mov" type="video/quicktime" />
+              <source src="jeelvid04.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="video-card-wrap vc5">
+          <div class="video-card">
+            <video autoplay muted loop playsinline preload="none">
+              <source src="jeelvid05.mov" type="video/quicktime" />
+              <source src="jeelvid05.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JEEL MOMENTS — lifestyle carousel ═══ -->
+  <section class="moments-section" aria-label="Jeel moments">
+    <div class="mo-header reveal">
+      <h2 class="mo-title">
+        <span data-lang="en">Moments with Jeel</span>
+        <span class="hidden" data-lang="ar">لحظات مع <span class="mo-key">جيل</span></span>
+      </h2>
+      <p class="mo-subtitle">
+        <span data-lang="en">A daily ritual… for beauty that lasts.</span>
+        <span class="hidden" data-lang="ar">روتين يومي… لجمال يستحق الاستمرار.</span>
+      </p>
+    </div>
+
+    <div class="mo-carousel reveal" id="moCarousel">
+      <button class="mo-arrow mo-prev" id="moPrev" aria-label="Previous slide">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="mo-viewport" id="moViewport">
+        <div class="mo-track" id="moTrack">
+          <div class="mo-slide">
+            <img src="jeel-moment-01.png" alt="Jeel Lotion moment" loading="lazy" draggable="false" />
+            <p class="mo-caption">Jeel Lotion</p>
+          </div>
+          <div class="mo-slide">
+            <img src="jeel-moment-02.png" alt="Jeel Cream moment" loading="lazy" draggable="false" />
+            <p class="mo-caption">Jeel Cream</p>
+          </div>
+          <div class="mo-slide">
+            <img src="jeel-moment-03.png" alt="Jeel Serum moment" loading="lazy" draggable="false" />
+            <p class="mo-caption">Jeel Serum</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="mo-arrow mo-next" id="moNext" aria-label="Next slide">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="mo-dots" id="moDots" role="tablist" aria-label="Slides"></div>
+    </div>
+  </section>
+
+  <!-- ═══ JEEL VALUES ═══ -->
+  <section class="values-section" aria-label="Jeel values">
+    <div class="values-track" aria-hidden="true">
+
+      <!-- Single row — 14 pills × 2 duplicates for seamless infinite loop -->
+      <!-- Direction: EN = left→right / AR = right→left (controlled via CSS + body class) -->
+      <div class="vt-row">
+        <span class="vpill p-blue"   data-en="Vitality"    data-ar="حيوية">Vitality</span>
+        <span class="vpill p-pink"   data-en="Radiance"    data-ar="إشراقة">Radiance</span>
+        <span class="vpill p-yellow" data-en="Care"        data-ar="عناية">Care</span>
+        <span class="vpill p-blue"   data-en="Balance"     data-ar="توازن">Balance</span>
+        <span class="vpill p-pink"   data-en="Refreshment" data-ar="انتعاش">Refreshment</span>
+        <span class="vpill p-yellow" data-en="Confidence"  data-ar="ثقة">Confidence</span>
+        <span class="vpill p-blue"   data-en="Glow"        data-ar="نضارة">Glow</span>
+        <span class="vpill p-pink"   data-en="Energy"      data-ar="نشاط">Energy</span>
+        <span class="vpill p-yellow" data-en="Comfort"     data-ar="راحة">Comfort</span>
+        <span class="vpill p-blue"   data-en="Flexibility" data-ar="مرونة">Flexibility</span>
+        <span class="vpill p-pink"   data-en="Brilliance"  data-ar="تألق">Brilliance</span>
+        <span class="vpill p-yellow" data-en="Quality"     data-ar="جودة">Quality</span>
+        <span class="vpill p-blue"   data-en="Wellness"    data-ar="صحة">Wellness</span>
+        <span class="vpill p-pink"   data-en="Well-Being"  data-ar="رفاهية">Well-Being</span>
+        <!-- Seamless duplicate set -->
+        <span class="vpill p-blue"   data-en="Vitality"    data-ar="حيوية">Vitality</span>
+        <span class="vpill p-pink"   data-en="Radiance"    data-ar="إشراقة">Radiance</span>
+        <span class="vpill p-yellow" data-en="Care"        data-ar="عناية">Care</span>
+        <span class="vpill p-blue"   data-en="Balance"     data-ar="توازن">Balance</span>
+        <span class="vpill p-pink"   data-en="Refreshment" data-ar="انتعاش">Refreshment</span>
+        <span class="vpill p-yellow" data-en="Confidence"  data-ar="ثقة">Confidence</span>
+        <span class="vpill p-blue"   data-en="Glow"        data-ar="نضارة">Glow</span>
+        <span class="vpill p-pink"   data-en="Energy"      data-ar="نشاط">Energy</span>
+        <span class="vpill p-yellow" data-en="Comfort"     data-ar="راحة">Comfort</span>
+        <span class="vpill p-blue"   data-en="Flexibility" data-ar="مرونة">Flexibility</span>
+        <span class="vpill p-pink"   data-en="Brilliance"  data-ar="تألق">Brilliance</span>
+        <span class="vpill p-yellow" data-en="Quality"     data-ar="جودة">Quality</span>
+        <span class="vpill p-blue"   data-en="Wellness"    data-ar="صحة">Wellness</span>
+        <span class="vpill p-pink"   data-en="Well-Being"  data-ar="رفاهية">Well-Being</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ THE MEANING OF JEEL ═══ -->
+  <section class="jeel-name-section" aria-label="The meaning of Jeel">
+
+    <!-- English -->
+    <div class="jeel-name-inner" data-lang="en">
+
+      <!-- Brand mark — floats gently -->
+      <div class="ab2-ch jn2-logo reveal">
+        <div class="jn2-float"><img src="jeel-name.svg" alt="Jeel" class="jeel-name-svg" /></div>
+      </div>
+
+      <!-- Heading — word-by-word, gradient on "Jeel." -->
+      <div class="ab2-ch reveal">
+        <h2 class="ab2-display jn2-heading" data-wordfx><span class="ab2-key">Jeel.</span> A Name Chosen with Purpose.</h2>      </div>
+
+      <!-- Definition -->
+      <div class="ab2-ch reveal">
+        <p class="ab2-intro" data-wordfx>"Jeel" is the Arabic word for <span class="ab2-chip chip-blue">Generation.</span></p>
+      </div>
+
+      <!-- Story with interactive keywords -->
+      <div class="ab2-ch reveal">
+        <p class="ab2-intro jn2-body" data-wordfx>We chose the name Jeel because wellness is more than a passing product — a way of thinking that places <span class="ab2-chip chip-blue">collagen</span> at the beginning, <span class="ab2-chip chip-yellow">quality</span> at the heart of every choice, and <span class="ab2-chip chip-pink">self-care</span> as a natural part of daily life.</p>
+      </div>
+
+      <!-- Why — pull quote -->
+      <div class="ab2-ch reveal">
+        <div class="ab2-quote-wrap">
+          <div class="ab2-qline" aria-hidden="true"></div>
+          <p class="ab2-quote jn2-quote" data-wordfx>That is why we chose the name Jeel.</p>
+          <div class="ab2-qline ab2-qline-r" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Generation cards -->
+      <div class="ab2-ch jn2-cards-ch reveal">
+        <div class="ab2-cards">
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <p>A generation that begins with collagen</p>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-pink.svg" alt="" /></div>
+            <p>A generation that embraces everyday wellness</p>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-yellow.svg" alt="" /></div>
+            <p>A generation that chooses to feel its best, every day</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arabic -->
+    <div class="jeel-name-inner hidden" data-lang="ar">
+
+      <!-- الشعار — يطفو بهدوء -->
+      <div class="ab2-ch jn2-logo reveal">
+        <div class="jn2-float"><img src="jeel-name.svg" alt="جيل" class="jeel-name-svg" /></div>
+      </div>
+
+      <!-- العنوان — كلمة كلمة، وتدرّج على "جيل…" -->
+      <div class="ab2-ch reveal">
+        <h2 class="ab2-display jn2-heading" data-wordfx><span class="ab2-key">جيل…</span> اسم اخترناه عن قصد.</h2>      </div>
+
+      <!-- القصة مع كلمات تفاعلية -->
+      <div class="ab2-ch reveal">
+        <p class="ab2-intro jn2-body" data-wordfx>اخترنا اسم "جيل" لأننا نؤمن بأن العناية ليست منتجاً عابراً، بل طريقة جديدة للتفكير بالصحة والجمال والعافية — طريقة تجعل <span class="ab2-chip chip-blue">الكولاجين</span> نقطة البداية، <span class="ab2-chip chip-yellow">والجودة</span> أساس الاختيار، <span class="ab2-chip chip-pink">والاهتمام بالنفس</span> جزءاً طبيعياً من كل يوم.</p>
+      </div>
+
+      <!-- لماذا — اقتباس -->
+      <div class="ab2-ch reveal">
+        <div class="ab2-quote-wrap">
+          <div class="ab2-qline" aria-hidden="true"></div>
+          <p class="ab2-quote jn2-quote" data-wordfx>لهذا كان اسمنا جيل.</p>
+          <div class="ab2-qline ab2-qline-r" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- بطاقات الجيل -->
+      <div class="ab2-ch jn2-cards-ch reveal">
+        <div class="ab2-cards">
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-blue.svg" alt="" /></div>
+            <p>جيل يبدأ بالكولاجين</p>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-pink.svg" alt="" /></div>
+            <p>جيل يؤمن بالعناية اليومية</p>
+          </div>
+          <div class="ab2-card">
+            <div class="ab2-card-leaf" aria-hidden="true"><img src="leaf-yellow.svg" alt="" /></div>
+            <p>وجيل يختار الأفضل لنفسه كل يوم</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ═══ GLOBE / CONTACT ═══ -->
+  <section class="globe-section" id="contact">
+    <div class="globe-inner">
+      <div class="globe-header reveal">
+        <p class="globe-label" data-en="We're present worldwide" data-ar="نحن موجودون حول العالم">We're present worldwide</p>
+        <h2 class="globe-title" data-en="Connect with your region" data-ar="نخدمك في منطقتك">Connect with your region</h2>
+      </div>
+
+      <!-- Three.js Globe canvas -->
+      <div class="globe-stage" id="globeStage">
+        <canvas id="globeCanvas"></canvas>
+        <div class="globe-leaves" id="globeLeaves" aria-hidden="true"></div>
+      </div>
+
+      <!-- Country cards — name + email, click opens mail client -->
+      <div class="country-grid reveal">
+        <a href="mailto:sa@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Saudi Arabia" data-ar="السعودية">Saudi Arabia</span>
+          <span class="country-email">sa@jeelwellness.com</span>
+        </a>
+        <a href="mailto:usa@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="USA" data-ar="الولايات المتحدة">USA</span>
+          <span class="country-email">usa@jeelwellness.com</span>
+        </a>
+        <a href="mailto:jo@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Jordan" data-ar="الأردن">Jordan</span>
+          <span class="country-email">jo@jeelwellness.com</span>
+        </a>
+        <a href="mailto:qa@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Qatar" data-ar="قطر">Qatar</span>
+          <span class="country-email">qa@jeelwellness.com</span>
+        </a>
+        <a href="mailto:kw@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Kuwait" data-ar="الكويت">Kuwait</span>
+          <span class="country-email">kw@jeelwellness.com</span>
+        </a>
+        <a href="mailto:bh@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Bahrain" data-ar="البحرين">Bahrain</span>
+          <span class="country-email">bh@jeelwellness.com</span>
+        </a>
+        <a href="mailto:om@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Oman" data-ar="عُمان">Oman</span>
+          <span class="country-email">om@jeelwellness.com</span>
+        </a>
+        <a href="mailto:ae@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="UAE" data-ar="الإمارات">UAE</span>
+          <span class="country-email">ae@jeelwellness.com</span>
+        </a>
+        <a href="mailto:sy@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Syria" data-ar="سوريا">Syria</span>
+          <span class="country-email">sy@jeelwellness.com</span>
+        </a>
+        <a href="mailto:lb@jeelwellness.com" class="country-btn">
+          <span class="country-name" data-en="Lebanon" data-ar="لبنان">Lebanon</span>
+          <span class="country-email">lb@jeelwellness.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JORDAN MADE ═══ -->
+  <section class="jordan-made" aria-label="Jordan Made">
+
+    <!-- English -->
+    <div class="jordan-made-inner reveal" data-lang="en">
+      <img src="JordanMade.svg" alt="Jordan Made" class="jordan-made-seal" />
+      <div class="jordan-made-rule"></div>
+      <h2 class="jordan-made-heading">From Jordan to the World.</h2>
+      <p class="jordan-made-body">Exceptional collagen and thoughtfully sourced ingredients behind every Jeel creation.</p>
+    </div>
+
+    <!-- Arabic -->
+    <div class="jordan-made-inner reveal hidden" data-lang="ar">
+      <img src="JordanMade.svg" alt="Jordan Made" class="jordan-made-seal" />
+      <div class="jordan-made-rule"></div>
+      <h2 class="jordan-made-heading">من الأردن إلى العالم.</h2>
+      <p class="jordan-made-body">كولاجين فاخر ومكونات منتقاة بعناية في كل ابتكار من ابتكارات جيل.</p>
+    </div>
+
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <!-- Decorative leaves -->
+    <span class="footer-leaf footer-leaf-1" aria-hidden="true"><img src="leaf-blue.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-2" aria-hidden="true"><img src="leaf-pink.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-3" aria-hidden="true"><img src="leaf-yellow.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-4" aria-hidden="true"><img src="leaf-blue.svg" alt=""></span>
+
+    <div class="footer-inner">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="jeel wellness logo.svg" alt="Jeel Wellness" class="footer-logo" />
+        </div>
+
+        <div class="footer-social">
+          <a href="https://www.instagram.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/jeelwellnessco/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.x.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="X / Twitter" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-mid">
+        <div class="footer-contact-info">
+          <span class="footer-contact-label" data-en="For international inquiries and distribution partnerships" data-ar="للتواصل من جميع أنحاء العالم عبر الرقم التالي">For international inquiries and distribution partnerships</span>
+          <a href="tel:+00962777700018" class="footer-phone">+00962 777 700 018</a>
+        </div>
+        <div class="footer-payment">
+          <img src="payment methods.svg" alt="Accepted payment methods" class="payment-img" />
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" data-en="© 2026 Jeel Wellness. All rights reserved." data-ar="© ٢٠٢٦ جيل ويلنس. جميع الحقوق محفوظة.">© 2026 Jeel Wellness. All rights reserved.</p>
+        <a href="https://store.jeelwellness.com" target="_blank" class="footer-store-link" data-en="Visit Store →" data-ar="زيارة المتجر →">Visit Store →</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
