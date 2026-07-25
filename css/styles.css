@@ -3932,10 +3932,12 @@ img, video, svg, picture {
 .hd-can { width: clamp(180px, 20vw, 280px); animation: hdFloat 7s ease-in-out infinite; }
 .hd-can img {
   width: 100%; height: auto; display: block;
-  /* shadow scaled to the can size so it grounds the product
-     instead of blooming into a visible box behind it */
-  filter: drop-shadow(0 14px 22px rgba(90,150,175,0.22));
+  /* No filter on purpose — Safari rasterises a filtered image inside an
+     animated/3D parent as an opaque box, which read as a background. */
+  filter: none;
+  background: transparent;
 }
+.hd-can, .hd-visual { background: transparent; }
 @keyframes hdFloat {
   0%, 100% { transform: translateY(0)     rotate(-0.6deg); }
   50%      { transform: translateY(-16px) rotate(0.6deg); }

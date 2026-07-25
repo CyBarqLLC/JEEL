@@ -263,17 +263,23 @@
       top: 120px;
       display: flex;
       justify-content: center;
-      perspective: 1000px;
       padding: 20px 0 60px;
     }
     .dk-sticky-can-inner { width: clamp(180px, 17vw, 250px); will-change: transform; }
     .dk-sticky-can-inner img { width: 100%; height: auto; display: block; }
 
-    /* shared can presentation — identical treatment to the hero can,
-       shadow scaled to the smaller size so it never reads as a box */
-    .dk-can-figure { position: relative; }
+    /* Inner cans: plain transparent product shot.
+       No filter and no overlay here on purpose — Safari rasterises a
+       filtered image inside a 3D/animated parent as an opaque box,
+       which is what made these look like they had a background. */
+    .dk-can-figure {
+      position: relative;
+      background: transparent;
+      isolation: isolate;
+    }
     .dk-can-figure .dk-can-img {
-      filter: drop-shadow(0 14px 22px rgba(90,150,175,0.22));
+      filter: none;
+      background: transparent;
     }
 
     .dk-feat {
@@ -569,7 +575,7 @@
       align-items: center;
       gap: clamp(28px, 4.5vw, 70px);
     }
-    .dk-partner-can { display: flex; justify-content: center; perspective: 1000px; }
+    .dk-partner-can { display: flex; justify-content: center; }
     .dk-partner-can .pc-inner {
       width: clamp(170px, 17vw, 240px);
       animation: dkFloat 7s ease-in-out infinite;
@@ -786,7 +792,6 @@
               <source srcset="jeel-can.webp" type="image/webp" />
               <img src="jeel-can.png" alt="" class="dk-can-img" width="545" height="1400" loading="lazy" draggable="false" />
             </picture>
-            <div class="dk-can-sheen" aria-hidden="true"></div>
           </div>
         </div>
       </div>
@@ -915,7 +920,6 @@
               <source srcset="jeel-can.webp" type="image/webp" />
               <img src="jeel-can.png" alt="" class="dk-can-img" width="545" height="1400" loading="lazy" draggable="false" />
             </picture>
-            <div class="dk-can-sheen" aria-hidden="true"></div>
           </div>
         </div>
       </div>
