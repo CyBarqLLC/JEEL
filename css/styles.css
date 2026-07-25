@@ -1131,7 +1131,7 @@ body.lang-ar .ab-headline {
 .ab-rule {
   width: 52px;
   height: 2px;
-  background: linear-gradient(90deg, var(--c-primary), var(--c-pink));
+  background: linear-gradient(90deg, var(--c-primary), #7bb9d0);
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: center;
@@ -1149,7 +1149,7 @@ body.lang-ar .ab-headline {
 .ab-bar {
   width: 2px;
   height: 44px;
-  background: linear-gradient(to bottom, var(--c-primary), var(--c-pink));
+  background: linear-gradient(to bottom, var(--c-primary), #7bb9d0);
   border-radius: 2px;
   flex-shrink: 0;
   transform: scaleY(0);
@@ -1705,18 +1705,18 @@ body.lang-ar .country-name {
 }
 .social-link svg { width: 17px; height: 17px; position: relative; z-index: 1; }
 
-/* Instagram — soft pink */
+/* Instagram — deep Jeel blue */
 .social-link[aria-label="Instagram"] {
-  background: linear-gradient(135deg, rgba(244,182,214,0.28) 0%, rgba(244,182,214,0.12) 100%);
-  border: 1px solid rgba(244,182,214,0.45);
-  color: rgba(130,30,75,0.82);
-  box-shadow: 0 3px 14px rgba(244,182,214,0.18);
+  background: linear-gradient(135deg, rgba(123,185,208,0.28) 0%, rgba(123,185,208,0.12) 100%);
+  border: 1px solid rgba(123,185,208,0.45);
+  color: rgba(15,70,95,0.82);
+  box-shadow: 0 3px 14px rgba(123,185,208,0.18);
 }
 .social-link[aria-label="Instagram"]:hover {
   transform: translateY(-3px) scale(1.08);
-  background: linear-gradient(135deg, rgba(244,182,214,0.42) 0%, rgba(244,182,214,0.22) 100%);
-  box-shadow: 0 8px 28px rgba(244,182,214,0.38);
-  border-color: rgba(244,182,214,0.65);
+  background: linear-gradient(135deg, rgba(123,185,208,0.42) 0%, rgba(123,185,208,0.22) 100%);
+  box-shadow: 0 8px 28px rgba(123,185,208,0.38);
+  border-color: rgba(123,185,208,0.65);
 }
 
 /* Facebook — soft sky blue */
@@ -1747,18 +1747,18 @@ body.lang-ar .country-name {
   border-color: rgba(170,220,234,0.58);
 }
 
-/* X / Twitter — warm cream yellow */
+/* X / Twitter — palest Jeel blue */
 .social-link[aria-label="X / Twitter"] {
-  background: linear-gradient(135deg, rgba(243,222,144,0.28) 0%, rgba(243,222,144,0.12) 100%);
-  border: 1px solid rgba(243,222,144,0.45);
-  color: rgba(75,55,0,0.78);
-  box-shadow: 0 3px 14px rgba(243,222,144,0.14);
+  background: linear-gradient(135deg, rgba(213,238,247,0.55) 0%, rgba(213,238,247,0.25) 100%);
+  border: 1px solid rgba(170,220,234,0.50);
+  color: rgba(25,85,110,0.78);
+  box-shadow: 0 3px 14px rgba(170,220,234,0.14);
 }
 .social-link[aria-label="X / Twitter"]:hover {
   transform: translateY(-3px) scale(1.08);
-  background: linear-gradient(135deg, rgba(243,222,144,0.42) 0%, rgba(243,222,144,0.22) 100%);
-  box-shadow: 0 8px 28px rgba(243,222,144,0.30);
-  border-color: rgba(243,222,144,0.65);
+  background: linear-gradient(135deg, rgba(213,238,247,0.80) 0%, rgba(213,238,247,0.42) 100%);
+  box-shadow: 0 8px 28px rgba(170,220,234,0.30);
+  border-color: rgba(170,220,234,0.70);
 }
 .footer-divider {
   height: 1px;
@@ -2315,7 +2315,7 @@ body.lang-ar .collection-title { font-family: var(--font-ar); letter-spacing: 0;
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--c-primary), var(--c-pink), var(--c-yellow));
+  background: linear-gradient(90deg, var(--c-primary), #7bb9d0);
   opacity: 0;
   transition: opacity 0.4s;
   border-radius: 28px 28px 0 0;
@@ -2751,33 +2751,33 @@ body.lang-ar .vpill {
 }
 .vpill.p-pink {
   background: linear-gradient(135deg,
-    rgba(244,182,214,0.28) 0%,
-    rgba(244,182,214,0.12) 100%
+    rgba(123,185,208,0.28) 0%,
+    rgba(123,185,208,0.12) 100%
   );
-  border: 1px solid rgba(244,182,214,0.48);
-  color: rgba(80,20,50,0.75);
-  box-shadow: 0 4px 24px rgba(244,182,214,0.16), 0 1px 0 rgba(255,255,255,0.8) inset;
+  border: 1px solid rgba(123,185,208,0.48);
+  color: rgba(15,70,95,0.78);
+  box-shadow: 0 4px 24px rgba(123,185,208,0.16), 0 1px 0 rgba(255,255,255,0.8) inset;
 }
 .vpill.p-pink:hover {
   box-shadow:
-    0 10px 36px rgba(244,182,214,0.30),
-    0 0 0 1.5px rgba(244,182,214,0.52),
+    0 10px 36px rgba(123,185,208,0.30),
+    0 0 0 1.5px rgba(123,185,208,0.52),
     0 1px 0 rgba(255,255,255,0.9) inset;
   filter: brightness(1.04);
 }
 .vpill.p-yellow {
   background: linear-gradient(135deg,
-    rgba(243,222,144,0.32) 0%,
-    rgba(243,222,144,0.14) 100%
+    rgba(213,238,247,0.60) 0%,
+    rgba(213,238,247,0.28) 100%
   );
-  border: 1px solid rgba(243,222,144,0.52);
-  color: rgba(70,50,0,0.75);
-  box-shadow: 0 4px 24px rgba(243,222,144,0.16), 0 1px 0 rgba(255,255,255,0.8) inset;
+  border: 1px solid rgba(170,220,234,0.55);
+  color: rgba(25,85,110,0.78);
+  box-shadow: 0 4px 24px rgba(170,220,234,0.14), 0 1px 0 rgba(255,255,255,0.8) inset;
 }
 .vpill.p-yellow:hover {
   box-shadow:
-    0 10px 36px rgba(243,222,144,0.28),
-    0 0 0 1.5px rgba(243,222,144,0.55),
+    0 10px 36px rgba(170,220,234,0.28),
+    0 0 0 1.5px rgba(170,220,234,0.55),
     0 1px 0 rgba(255,255,255,0.9) inset;
   filter: brightness(1.04);
 }
@@ -3256,8 +3256,8 @@ body.lang-ar .ab2-intro { font-family: var(--font-ar); line-height: var(--lh-sub
   cursor: default;
 }
 .chip-blue   { background: rgba(170,220,234,0.30); border-color: rgba(170,220,234,0.75); }
-.chip-pink   { background: rgba(244,182,214,0.26); border-color: rgba(244,182,214,0.70); }
-.chip-yellow { background: rgba(243,222,144,0.30); border-color: rgba(243,222,144,0.80); }
+.chip-pink   { background: rgba(123,185,208,0.24); border-color: rgba(123,185,208,0.65); }
+.chip-yellow { background: rgba(213,238,247,0.60); border-color: rgba(170,220,234,0.60); }
 
 .ab2-ch.visible.wfx-done .ab2-chip {
   transition:
@@ -3266,8 +3266,8 @@ body.lang-ar .ab2-intro { font-family: var(--font-ar); line-height: var(--lh-sub
 }
 .ab2-ch.visible .ab2-chip:hover { transform: translateY(-4px) scale(1.07) rotate(-1.5deg); }
 .ab2-ch.visible .chip-blue:hover   { box-shadow: 0 10px 30px rgba(170,220,234,0.50); background: rgba(170,220,234,0.45); }
-.ab2-ch.visible .chip-pink:hover   { box-shadow: 0 10px 30px rgba(244,182,214,0.50); background: rgba(244,182,214,0.42); }
-.ab2-ch.visible .chip-yellow:hover { box-shadow: 0 10px 30px rgba(243,222,144,0.55); background: rgba(243,222,144,0.48); }
+.ab2-ch.visible .chip-pink:hover   { box-shadow: 0 10px 30px rgba(123,185,208,0.45); background: rgba(123,185,208,0.38); }
+.ab2-ch.visible .chip-yellow:hover { box-shadow: 0 10px 30px rgba(170,220,234,0.50); background: rgba(213,238,247,0.85); }
 
 /* ── ✦ · collagen card: entrance, 3D tilt, cursor shine ── */
 .ab2-ch3 .about-collagen {
@@ -3895,8 +3895,171 @@ img, video, svg, picture {
 .about-deco-product img,
 .cc-leaf img,
 .ab2-card-leaf img,
-.footer-leaf img {
+.footer-leaf img,
+/* collagen drink assets (home + drink page) */
+.hd-can img,
+.dk-can-img,
+.dk-sticky-can-inner img,
+.dk-partner-can img,
+.nav-logo-img,
+.footer-logo,
+.jeel-name-svg,
+.jordan-made-seal,
+.payment-img {
   pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOME — COLLAGEN DRINK highlight
+═══════════════════════════════════════════════════════ */
+.hd-section {
+  position: relative;
+  padding: clamp(80px, 10vw, 150px) 24px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(170,220,234,0.14) 52%, #ffffff 100%);
+}
+.hd-inner {
+  position: relative; z-index: 2;
+  max-width: 1100px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 76px);
+}
+
+/* can + floating badge */
+.hd-visual { position: relative; display: flex; justify-content: center; }
+.hd-can { width: clamp(180px, 20vw, 280px); animation: hdFloat 7s ease-in-out infinite; }
+.hd-can img { width: 100%; height: auto; display: block; filter: drop-shadow(0 26px 48px rgba(90,150,175,0.26)); }
+@keyframes hdFloat {
+  0%, 100% { transform: translateY(0)     rotate(-0.6deg); }
+  50%      { transform: translateY(-16px) rotate(0.6deg); }
+}
+.hd-badge {
+  position: absolute;
+  top: 8%;
+  inset-inline-end: -4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(92px, 10vw, 128px);
+  height: clamp(92px, 10vw, 128px);
+  border-radius: 50%;
+  text-align: center;
+  background: linear-gradient(140deg, rgba(255,255,255,0.96), rgba(170,220,234,0.55));
+  border: 1px solid rgba(123,185,208,0.60);
+  box-shadow: 0 10px 34px rgba(123,185,208,0.32);
+  animation: hdBadge 5s ease-in-out infinite;
+}
+.hd-badge strong {
+  font-family: var(--font-en);
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 600;
+  color: #2b7d9c;
+  line-height: 1;
+  direction: ltr; unicode-bidi: isolate;
+}
+.hd-badge em {
+  font-style: normal;
+  font-size: clamp(10px, 1.05vw, 12px);
+  font-weight: 500;
+  color: rgba(0,0,0,0.50);
+  margin-top: 5px;
+}
+body.lang-ar .hd-badge em { font-family: var(--font-ar); }
+@keyframes hdBadge {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-9px) scale(1.04); }
+}
+
+/* rising bubbles */
+.hd-bubbles { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+.hd-bubbles span {
+  position: absolute; bottom: -3%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95), rgba(170,220,234,0.42) 58%, rgba(170,220,234,0.10));
+  box-shadow: 0 0 10px rgba(170,220,234,0.32);
+  opacity: 0;
+  animation: hdBubble var(--d, 9s) linear infinite var(--dl, 0s);
+}
+@keyframes hdBubble {
+  0%   { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
+  12%  { opacity: var(--o, 0.45); }
+  80%  { opacity: var(--o, 0.45); }
+  100% { transform: translateY(calc(-1 * var(--h, 60vh))) translateX(var(--dx, 12px)) scale(1.1); opacity: 0; }
+}
+
+/* copy */
+.hd-copy { text-align: start; }
+.hd-eyebrow {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: clamp(22px, 2.9vw, 38px); font-weight: 600; letter-spacing: -0.01em;
+  text-transform: none;
+  line-height: 1.25;
+  color: #5d9fb8;
+  margin-bottom: clamp(14px, 1.8vw, 22px);
+  white-space: nowrap;   /* keep the product name on one line */
+}
+body.lang-ar .hd-eyebrow { font-size: clamp(22px, 2.9vw, 38px); }
+@media (max-width: 420px) {
+  .hd-eyebrow, body.lang-ar .hd-eyebrow { font-size: clamp(18px, 5.6vw, 24px); }
+}
+body.lang-ar .hd-eyebrow { font-family: var(--font-ar); letter-spacing: 0; text-transform: none; }
+.hd-title {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-title);
+  letter-spacing: var(--ls-title);
+  line-height: var(--lh-title);
+  color: var(--c-black);
+  margin: 0 0 clamp(16px, 2.2vw, 26px);
+}
+body.lang-ar .hd-title { font-family: var(--font-ar); letter-spacing: 0; line-height: var(--lh-title-ar); }
+.hd-body {
+  font-size: var(--fs-sub);
+  font-weight: var(--fw-sub);
+  line-height: var(--lh-sub);
+  color: var(--c-sub);
+  margin: 0 0 clamp(24px, 3vw, 36px);
+  max-width: 620px;
+}
+body.lang-ar .hd-body { font-family: var(--font-ar); line-height: var(--lh-sub-ar); }
+
+.hd-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2.2vw, 30px);
+  margin-bottom: clamp(26px, 3.4vw, 40px);
+}
+.hd-stat {
+  padding-inline-start: 14px;
+  border-inline-start: 2px solid rgba(170,220,234,0.85);
+}
+.hd-stat-v {
+  display: block;
+  font-family: var(--font-en);
+  font-size: clamp(17px, 1.9vw, 22px);
+  font-weight: 600;
+  color: var(--c-black);
+  direction: ltr; unicode-bidi: isolate;
+}
+body.lang-ar .hd-stat-v { font-family: var(--font-ar); direction: rtl; }
+.hd-stat-l { font-size: clamp(12px, 1.3vw, 14px); color: rgba(0,0,0,0.50); }
+body.lang-ar .hd-stat-l { font-family: var(--font-ar); }
+
+@media (max-width: 900px) {
+  .hd-inner { grid-template-columns: 1fr; text-align: center; }
+  .hd-copy { text-align: center; }
+  .hd-body { margin-inline: auto; }
+  .hd-stats { justify-content: center; }
+  .hd-stat { padding-inline: 14px; border-inline-end: none; }
+  .hd-can { width: clamp(150px, 42vw, 210px); }
+  .hd-badge { inset-inline-end: 2%; width: 84px; height: 84px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hd-can, .hd-badge { animation: none !important; }
+  .hd-bubbles { display: none; }
 }
 
 /* ═══ THE MEANING OF JEEL — v2 (reuses ab2 engine) ═══ */

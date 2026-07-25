@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jeel Collagen Drink carries 15,000 mg of collagen peptides, the world's highest dose in a ready-to-drink can, with a Tutti Frutti flavor you actually enjoy, zero added sugar and 20 calories." />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Jeel Collagen Drink | 15,000 mg World's Highest Dose</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Jeel Wellness" />
+  <meta property="og:title" content="Jeel Collagen Drink | 15,000 mg World's Highest Dose" />
+  <meta property="og:description" content="Jeel Collagen Drink carries 15,000 mg of collagen peptides, the world's highest dose in a ready-to-drink can, with a Tutti Frutti flavor you actually enjoy, zero added sugar and 20 calories." />
+  <meta property="og:image" content="https://jeelwellness.com/jeel-can.png" />
+  <meta property="og:url" content="https://jeelwellness.com/drink.html" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jeel Collagen Drink | 15,000 mg World's Highest Dose" />
+  <meta name="twitter:description" content="Jeel Collagen Drink carries 15,000 mg of collagen peptides, the world's highest dose in a ready-to-drink can, with a Tutti Frutti flavor you actually enjoy, zero added sugar and 20 calories." />
+  <meta name="twitter:image" content="https://jeelwellness.com/jeel-can.png" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preload" as="image" href="jeel-can.webp" type="image/webp" />
+
+  <style>
+    /* ═══════════════════════════════════════════════════
+       SPARKLING COLLAGEN DRINK — page styles
+       Palette: Jeel white/blue base + soft can-heart accents
+    ═══════════════════════════════════════════════════ */
+    :root {
+      /* blue-only palette — three depths of the Jeel blue */
+      --dk-teal:   123,185,208;   /* deep  */
+      --dk-pink:   170,220,234;   /* brand */
+      --dk-yellow: 213,238,247;   /* light */
+    }
+
+    /* ── HERO ── */
+    .dk-hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      overflow: hidden;
+      /* content sits from the top so the offset below is exact */
+      align-items: flex-start;
+      /* navbar clearance + 20% of the viewport pushed down from it */
+      padding: calc(72px + clamp(40px, 6vw, 80px) + 20vh) 24px clamp(48px, 6vw, 90px);
+      background: linear-gradient(165deg, #ffffff 0%, #f2f9fc 42%, rgba(170,220,234,0.20) 100%);
+    }
+    .dk-hero-bg {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 52% at 72% 40%, rgba(170,220,234,0.30) 0%, transparent 68%),
+        radial-gradient(ellipse 38% 30% at 14% 24%, rgba(var(--dk-pink), 0.14) 0%, transparent 62%),
+        radial-gradient(ellipse 34% 28% at 22% 82%, rgba(var(--dk-teal), 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 26% at 88% 86%, rgba(var(--dk-yellow), 0.12) 0%, transparent 60%);
+    }
+    .dk-hero-inner {
+      position: relative; z-index: 2;
+      max-width: 1160px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      align-items: center;
+      gap: clamp(24px, 4vw, 64px);
+      width: 100%;
+    }
+
+    .dk-hero-copy { text-align: start; }
+    .dk-kicker {
+      display: inline-block;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #5d9fb8;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(170,220,234,0.55);
+      margin-bottom: clamp(18px, 2.4vw, 28px);
+    }
+    body.lang-ar .dk-kicker { letter-spacing: 0; font-family: var(--font-ar); text-transform: none; }
+    .dk-title {
+      font-size: var(--fs-title);
+      font-weight: var(--fw-title);
+      letter-spacing: var(--ls-title);
+      line-height: var(--lh-title);
+      color: var(--c-black);
+      margin: 0 0 clamp(16px, 2vw, 24px);
+    }
+    body.lang-ar .dk-title { font-family: var(--font-ar); letter-spacing: 0; line-height: var(--lh-title-ar); }
+    .dk-title .ab2-key { font-weight: 500; }
+    .dk-sub {
+      font-size: var(--fs-sub);
+      font-weight: var(--fw-sub);
+      line-height: var(--lh-sub);
+      color: var(--c-sub);
+      max-width: 520px;
+      margin: 0 0 clamp(10px, 1.4vw, 16px);
+    }
+    body.lang-ar .dk-sub { font-family: var(--font-ar); line-height: var(--lh-sub-ar); }
+    .dk-flavor {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: clamp(15px, 1.6vw, 18px); font-weight: 600;
+      color: rgba(0,0,0,0.68);
+      margin: 0 0 clamp(26px, 3.4vw, 40px);
+    }
+    body.lang-ar .dk-flavor { font-family: var(--font-ar); }
+    .dk-flavor-hearts { display: inline-flex; }
+    .dk-flavor-hearts span {
+      width: 12px; height: 12px; border-radius: 3px 3px 6px 6px;
+      transform: rotate(45deg); margin-inline-end: -3px;
+      animation: dkHeartPulse 2.6s ease-in-out infinite;
+    }
+    .dk-flavor-hearts span:nth-child(1) { background: rgba(var(--dk-teal), 0.85);   animation-delay: 0s; }
+    .dk-flavor-hearts span:nth-child(2) { background: rgba(var(--dk-yellow), 0.95); animation-delay: 0.3s; }
+    .dk-flavor-hearts span:nth-child(3) { background: rgba(var(--dk-pink), 0.95);   animation-delay: 0.6s; }
+    @keyframes dkHeartPulse { 0%,100% { transform: rotate(45deg) scale(1); } 50% { transform: rotate(45deg) scale(1.18); } }
+
+    .dk-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .dk-btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 16px; font-weight: 600; letter-spacing: 0.04em;
+      padding: 16px 32px;
+      border-radius: var(--radius-pill);
+      color: rgba(0,0,0,0.72);
+      background: transparent;
+      border: 1.5px solid rgba(0,0,0,0.16);
+      transition: border-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.4s;
+    }
+    .dk-btn-ghost:hover {
+      border-color: rgba(170,220,234,0.95);
+      color: var(--c-black);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(170,220,234,0.25);
+    }
+    body.lang-ar .dk-btn-ghost { font-family: var(--font-ar); letter-spacing: 0; }
+
+    /* staggered copy entrance */
+    .dk-line { opacity: 0; transform: translateY(26px); animation: dkRise 0.9s var(--ease-out-expo) forwards; }
+    .dk-line.l1 { animation-delay: 0.25s; }
+    .dk-line.l2 { animation-delay: 0.40s; }
+    .dk-line.l3 { animation-delay: 0.55s; }
+    .dk-line.l4 { animation-delay: 0.70s; }
+    .dk-line.l5 { animation-delay: 0.85s; }
+    @keyframes dkRise { to { opacity: 1; transform: none; } }
+
+    /* ── the can ── */
+    .dk-hero-can {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      perspective: 1200px;
+    }
+    .dk-can-wrap {
+      position: relative;
+      width: clamp(240px, 26vw, 360px);
+      transform-style: preserve-3d;
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transition: transform 0.35s ease-out;
+      animation: dkCanEnter 1.5s var(--ease-out-expo) both;
+      cursor: grab;
+    }
+    .dk-can-wrap:active { cursor: grabbing; }
+    @keyframes dkCanEnter {
+      0%   { opacity: 0; transform: translateY(80px) rotate(-16deg) scale(0.78); }
+      100% { opacity: 1; transform: translateY(0)    rotate(0deg)   scale(1); }
+    }
+    .dk-can-float { animation: dkFloat 6.5s ease-in-out infinite 1.5s; }
+    @keyframes dkFloat {
+      0%, 100% { transform: translateY(0)     scale(1); }
+      50%      { transform: translateY(-18px) scale(1.015); }
+    }
+    .dk-can-spin { position: relative; animation: dkSpin 9s ease-in-out infinite 1.5s; transform-style: preserve-3d; }
+    @keyframes dkSpin {
+      0%, 100% { transform: rotateY(calc(var(--amp, 9deg) * -1)) rotate(1.2deg); }
+      50%      { transform: rotateY(var(--amp, 9deg))            rotate(-1.2deg); }
+    }
+    .dk-can-wrap:hover .dk-can-spin { --amp: 16deg; }
+    .dk-can-img { width: 100%; height: auto; display: block; user-select: none; pointer-events: none; filter: drop-shadow(0 30px 50px rgba(90,150,175,0.28)); }
+
+    /* travelling sheen, masked to the can silhouette */
+    .dk-can-sheen {
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+      background-size: 300% 100%;
+      -webkit-mask-image: url('jeel-can.webp');
+      mask-image: url('jeel-can.webp');
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      animation: dkSheen 6s ease-in-out infinite 2.4s;
+    }
+    @keyframes dkSheen {
+      0%, 55%   { background-position: 120% 0; }
+      85%, 100% { background-position: -60% 0; }
+    }
+
+    /* grounded shadow that breathes with the float */
+    .dk-can-shadow {
+      position: absolute;
+      bottom: clamp(-30px, -2vw, -14px);
+      left: 50%;
+      width: clamp(170px, 18vw, 250px);
+      height: 34px;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse at center, rgba(60,110,135,0.28), transparent 68%);
+      filter: blur(6px);
+      animation: dkShadow 6.5s ease-in-out infinite 1.5s;
+      pointer-events: none;
+    }
+    @keyframes dkShadow {
+      0%, 100% { transform: translateX(-50%) scaleX(1);    opacity: 0.9; }
+      50%      { transform: translateX(-50%) scaleX(0.82); opacity: 0.55; }
+    }
+
+    /* ── sparkling bubbles (JS generated) ── */
+    .dk-bubbles { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+    .dk-bubbles span {
+      position: absolute;
+      bottom: -3%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95), rgba(170,220,234,0.42) 58%, rgba(170,220,234,0.10));
+      box-shadow: 0 0 10px rgba(170,220,234,0.35);
+      opacity: 0;
+      animation: dkBubble var(--d, 9s) linear infinite var(--dl, 0s);
+    }
+    @keyframes dkBubble {
+      0%   { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
+      10%  { opacity: var(--o, 0.5); }
+      80%  { opacity: var(--o, 0.5); }
+      100% { transform: translateY(calc(-1 * var(--h, 70vh))) translateX(var(--dx, 12px)) scale(1.1); opacity: 0; }
+    }
+
+    /* ── shared section shell ── */
+    .dk-section { position: relative; padding: clamp(80px, 10vw, 150px) 24px; overflow: hidden; }
+    .dk-section-head { text-align: center; max-width: 820px; margin: 0 auto clamp(44px, 6vw, 80px); }
+    .dk-section-title {
+      font-size: var(--fs-title); font-weight: var(--fw-title);
+      letter-spacing: var(--ls-title); line-height: var(--lh-title);
+      color: var(--c-black); margin: 0 0 clamp(12px, 1.6vw, 20px);
+    }
+    body.lang-ar .dk-section-title { font-family: var(--font-ar); letter-spacing: 0; line-height: var(--lh-title-ar); }
+    .dk-section-sub {
+      font-size: var(--fs-sub); font-weight: var(--fw-sub); line-height: var(--lh-sub);
+      color: var(--c-sub); margin: 0 auto; max-width: 640px;
+    }
+    body.lang-ar .dk-section-sub { font-family: var(--font-ar); line-height: var(--lh-sub-ar); }
+
+    /* ── WHY JEEL — sticky can + features ── */
+    .dk-features { background: linear-gradient(180deg, #ffffff 0%, rgba(170,220,234,0.10) 55%, #ffffff 100%); }
+    .dk-feat-layout {
+      max-width: 1100px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(32px, 5vw, 80px);
+      align-items: start;
+    }
+    .dk-sticky-can {
+      position: sticky;
+      top: 120px;
+      display: flex;
+      justify-content: center;
+      perspective: 1000px;
+      padding: 20px 0 60px;
+    }
+    .dk-sticky-can-inner { width: clamp(180px, 17vw, 250px); will-change: transform; }
+    .dk-sticky-can-inner img { width: 100%; display: block; filter: drop-shadow(0 24px 44px rgba(90,150,175,0.25)); }
+
+    .dk-feat {
+      position: relative;
+      padding: clamp(26px, 3.2vw, 42px) clamp(22px, 2.8vw, 36px);
+      margin-bottom: clamp(18px, 2.4vw, 30px);
+      background: rgba(255,255,255,0.80);
+      border: 1px solid rgba(170,220,234,0.40);
+      border-radius: 24px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.04);
+      opacity: 0;
+      transition:
+        opacity 0.85s var(--ease-out-expo),
+        transform 0.85s var(--ease-out-expo),
+        box-shadow 0.4s, border-color 0.4s;
+    }
+    .dk-feat[data-fx="left"]  { transform: translateX(-48px); }
+    .dk-feat[data-fx="right"] { transform: translateX(48px); }
+    .dk-feat[data-fx="rise"]  { transform: translateY(44px); }
+    .dk-feat[data-fx="scale"] { transform: scale(0.92) translateY(20px); }
+    .dk-feat.visible { opacity: 1; transform: none; }
+    .dk-feat.visible:hover {
+      border-color: rgba(170,220,234,0.90);
+      box-shadow: 0 22px 56px rgba(170,220,234,0.32);
+      transform: perspective(900px)
+                 rotateX(var(--frx, 0deg))
+                 rotateY(var(--fry, 0deg))
+                 translateY(-5px);
+    }
+    /* cursor-following glow */
+    .dk-feat::before {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: radial-gradient(340px circle at var(--fmx, 50%) var(--fmy, 50%),
+        rgba(170,220,234,0.30), transparent 68%);
+      opacity: 0;
+      transition: opacity 0.45s ease;
+    }
+    .dk-feat.visible:hover::before { opacity: 1; }
+    /* left/right accent that draws in on hover */
+    .dk-feat::after {
+      content: '';
+      position: absolute;
+      inset-inline-start: 0; top: 18%; bottom: 18%;
+      width: 3px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(170,220,234,0.95), rgba(123,185,208,0.85));
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: transform 0.55s var(--ease-out-expo);
+    }
+    .dk-feat.visible:hover::after { transform: scaleY(1); }
+    .dk-feat > * { position: relative; z-index: 1; }
+    .dk-feat h3, .dk-feat p { transition: color 0.4s, transform 0.5s var(--ease-out-expo); }
+    .dk-feat.visible:hover h3 { transform: translateX(4px); }
+    body.lang-ar .dk-feat.visible:hover h3 { transform: translateX(-4px); }
+    .dk-feat-num {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 12px; font-weight: 600; letter-spacing: 0.35em;
+      color: rgba(0,0,0,0.30);
+      margin-bottom: 12px;
+    }
+    .dk-feat h3 {
+      font-size: clamp(19px, 2.1vw, 24px); font-weight: 500;
+      color: var(--c-black); margin: 0 0 10px; line-height: 1.4;
+    }
+    body.lang-ar .dk-feat h3 { font-family: var(--font-ar); }
+    .dk-feat p {
+      font-size: clamp(15px, 1.6vw, 17px); font-weight: 400; line-height: 1.85;
+      color: rgba(0,0,0,0.60); margin: 0;
+    }
+    body.lang-ar .dk-feat p { font-family: var(--font-ar); line-height: 2; }
+
+    /* ── WORLD FIRST ── */
+    .dk-world {
+      background: linear-gradient(180deg, #ffffff 0%, rgba(170,220,234,0.13) 50%, #ffffff 100%);
+    }
+    .dk-world-inner { position: relative; z-index: 2; max-width: 1060px; margin: 0 auto; }
+
+    .dk-shift {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: stretch;
+      gap: clamp(14px, 2.2vw, 26px);
+      margin-bottom: clamp(48px, 6vw, 80px);
+    }
+    .dk-shift-card {
+      padding: clamp(24px, 3.2vw, 40px);
+      border-radius: 26px;
+      opacity: 0; transform: translateY(34px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo),
+                  box-shadow 0.45s, border-color 0.45s;
+    }
+    .dk-shift-card.visible { opacity: 1; transform: none; }
+    .dk-shift-before {
+      background: rgba(245,247,248,0.85);
+      border: 1px dashed rgba(0,0,0,0.14);
+    }
+    .dk-shift-before p { color: rgba(0,0,0,0.50); }
+    .dk-shift-after {
+      background: linear-gradient(150deg, rgba(255,255,255,0.96) 0%, rgba(170,220,234,0.18) 100%);
+      border: 1px solid rgba(170,220,234,0.60);
+      box-shadow: 0 10px 40px rgba(170,220,234,0.20);
+    }
+    .dk-shift-after:hover {
+      border-color: rgba(123,185,208,0.95);
+      box-shadow: 0 20px 56px rgba(170,220,234,0.34);
+    }
+    .dk-shift-card p {
+      margin: 0;
+      font-size: clamp(15px, 1.6vw, 17px);
+      line-height: 1.9;
+      color: rgba(0,0,0,0.66);
+    }
+    body.lang-ar .dk-shift-card p { font-family: var(--font-ar); line-height: 2.05; }
+    .dk-shift-tag {
+      display: inline-block;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.35);
+      margin-bottom: 14px;
+    }
+    body.lang-ar .dk-shift-tag { font-family: var(--font-ar); letter-spacing: 0.02em; text-transform: none; font-size: 13px; }
+    .dk-tag-blue { color: #4d92ad; }
+
+    .dk-shift-arrow { display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.8s ease 0.3s; }
+    .dk-shift-arrow.visible { opacity: 1; }
+    .dk-shift-arrow span {
+      display: block; width: 34px; height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(170,220,234,0.95), rgba(123,185,208,0.80));
+      position: relative;
+      animation: dkArrow 2.4s ease-in-out infinite;
+    }
+    .dk-shift-arrow span::after {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      width: 8px; height: 8px;
+      border-top: 2px solid #fff; border-right: 2px solid #fff;
+      transform: translate(-60%, -50%) rotate(45deg);
+    }
+    body.lang-ar .dk-shift-arrow span::after { transform: translate(-40%, -50%) rotate(225deg); }
+    @keyframes dkArrow {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(5px); }
+    }
+    body.lang-ar .dk-shift-arrow span { animation-direction: reverse; }
+
+    /* dose comparison bars */
+    .dk-compare {
+      max-width: 820px; margin: 0 auto;
+      padding: clamp(24px, 3.2vw, 40px);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(170,220,234,0.45);
+      border-radius: 26px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .dk-compare.visible { opacity: 1; transform: none; }
+    .dk-bar-row {
+      display: grid;
+      grid-template-columns: minmax(120px, 0.9fr) minmax(0, 1.6fr) auto;
+      align-items: center;
+      gap: clamp(10px, 1.6vw, 20px);
+      margin-bottom: 18px;
+    }
+    .dk-bar-label { font-size: clamp(13px, 1.4vw, 15px); color: rgba(0,0,0,0.50); }
+    body.lang-ar .dk-bar-label { font-family: var(--font-ar); }
+    .dk-bar-label-us { font-weight: 600; color: var(--c-black); font-family: var(--font-en); direction: ltr; unicode-bidi: isolate; }
+    .dk-bar-track {
+      height: 12px; border-radius: 999px;
+      background: rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .dk-bar-fill {
+      height: 100%; width: 0; border-radius: 999px;
+      transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+    }
+    .dk-bar-them { background: rgba(0,0,0,0.14); }
+    .dk-bar-us {
+      background: linear-gradient(90deg, rgba(170,220,234,0.95), rgba(123,185,208,0.95));
+      box-shadow: 0 2px 14px rgba(123,185,208,0.45);
+      transition-delay: 0.45s;
+    }
+    .dk-bar-val {
+      font-family: var(--font-en);
+      font-size: clamp(13px, 1.4vw, 15px);
+      color: rgba(0,0,0,0.45);
+      white-space: nowrap;
+      direction: ltr; unicode-bidi: isolate;
+    }
+    .dk-bar-val-us { font-weight: 600; font-size: clamp(15px, 1.7vw, 19px); color: #3f88a5; }
+    .dk-compare-note {
+      margin: 20px 0 0;
+      font-size: clamp(13px, 1.4vw, 15px);
+      color: rgba(0,0,0,0.48);
+      text-align: center;
+      line-height: 1.8;
+    }
+    body.lang-ar .dk-compare-note { font-family: var(--font-ar); line-height: 2; }
+
+    @media (max-width: 820px) {
+      .dk-shift { grid-template-columns: 1fr; }
+      .dk-shift-arrow span { transform: rotate(90deg); }
+      body.lang-ar .dk-shift-arrow span { transform: rotate(90deg); }
+      .dk-bar-row { grid-template-columns: 1fr; gap: 6px; margin-bottom: 22px; }
+      .dk-bar-val { text-align: start; }
+    }
+
+    /* ── EXPERIENCE ── */
+    .dk-exp { background: linear-gradient(180deg, #ffffff 0%, rgba(170,220,234,0.14) 50%, #ffffff 100%); text-align: center; }
+    .dk-orb {
+      position: absolute; border-radius: 50%; filter: blur(46px);
+      pointer-events: none; z-index: 0;
+      animation: dkOrb 11s ease-in-out infinite;
+    }
+    .dk-orb-1 { width: 300px; height: 300px; top: 8%;  left: -6%;  background: rgba(var(--dk-pink), 0.30); }
+    .dk-orb-2 { width: 240px; height: 240px; top: 55%; right: -5%; background: rgba(var(--dk-teal), 0.22); animation-delay: 3s; }
+    .dk-orb-3 { width: 200px; height: 200px; bottom: 4%; left: 22%; background: rgba(var(--dk-yellow), 0.30); animation-delay: 6s; }
+    @keyframes dkOrb {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%      { transform: translateY(-34px) scale(1.08); }
+    }
+    .dk-exp-inner { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; }
+    .dk-counter {
+      display: block;
+      font-family: var(--font-en);
+      font-size: clamp(64px, 11vw, 150px);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin: clamp(30px, 4.5vw, 56px) 0 8px;
+      background-image: linear-gradient(128deg, #7bb9d0 0%, #aadcea 55%, #7bb9d0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
+    .dk-counter-label {
+      font-size: clamp(15px, 1.7vw, 19px); font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(0,0,0,0.45); margin: 0;
+    }
+    body.lang-ar .dk-counter-label { font-family: var(--font-ar); letter-spacing: 0.02em; text-transform: none; }
+
+    /* ── QUICK FACTS ── */
+    .dk-facts { padding-top: clamp(40px, 5vw, 70px); }
+    .dk-facts-grid {
+      max-width: 1060px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: clamp(12px, 1.8vw, 22px);
+    }
+    .dk-fact {
+      text-align: center;
+      padding: clamp(24px, 3vw, 38px) 14px;
+      background: rgba(255,255,255,0.80);
+      border: 1px solid rgba(170,220,234,0.40);
+      border-radius: 22px;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo), box-shadow 0.4s;
+    }
+    .dk-fact.visible { opacity: 1; transform: none; }
+    .dk-fact:hover { box-shadow: 0 14px 40px rgba(170,220,234,0.28); }
+    .dk-fact-value {
+      display: block;
+      font-family: var(--font-en);
+      font-size: clamp(20px, 2.4vw, 30px);
+      font-weight: 500;
+      color: var(--c-black);
+      margin-bottom: 6px;
+      direction: ltr; unicode-bidi: isolate;
+    }
+    .dk-fact-label { font-size: clamp(12px, 1.3vw, 14px); font-weight: 500; color: rgba(0,0,0,0.50); }
+    body.lang-ar .dk-fact-label { font-family: var(--font-ar); }
+
+    /* ── PARTNER CTA ── */
+    .dk-partner { background: linear-gradient(175deg, #ffffff 0%, rgba(170,220,234,0.16) 100%); }
+    .dk-partner-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      align-items: center;
+      gap: clamp(28px, 4.5vw, 70px);
+    }
+    .dk-partner-can { display: flex; justify-content: center; perspective: 1000px; }
+    .dk-partner-can .pc-inner {
+      width: clamp(170px, 17vw, 240px);
+      animation: dkFloat 7s ease-in-out infinite;
+    }
+    .dk-partner-can img { width: 100%; display: block; filter: drop-shadow(0 26px 46px rgba(90,150,175,0.26)); }
+    .dk-partner-copy { text-align: start; }
+    .dk-partner-copy .dk-section-title { margin-bottom: clamp(12px, 1.6vw, 18px); }
+    .dk-partner-copy .dk-section-sub { margin: 0 0 clamp(24px, 3vw, 38px); }
+
+    /* ── responsive ── */
+    @media (max-width: 900px) {
+      .dk-hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .dk-hero-copy { text-align: center; order: 1; }
+      .dk-sub { margin-inline: auto; }
+      .dk-actions { justify-content: center; }
+      .dk-hero-can { order: 2; }
+      .dk-can-wrap { width: clamp(200px, 52vw, 280px); }
+      .dk-feat-layout { grid-template-columns: 1fr; }
+      .dk-sticky-can { display: none; }
+      .dk-facts-grid { grid-template-columns: repeat(2, 1fr); }
+      .dk-fact:nth-child(5) { grid-column: 1 / -1; }
+      .dk-partner-inner { grid-template-columns: 1fr; text-align: center; }
+      .dk-partner-copy { text-align: center; }
+      .dk-partner-can .pc-inner { width: clamp(150px, 40vw, 200px); }
+    }
+    @media (max-width: 640px) {
+      .dk-hero { padding-top: calc(72px + 28px + 10vh); }
+      .dk-btn-ghost, .dk-actions .hero-cta { padding: 14px 26px; font-size: 15px; }
+      .dk-feat { padding: 22px 20px; }
+      .dk-feat[data-fx] { transform: translateY(30px); } /* lighter, single-axis motion */
+      .dk-feat.visible { transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dk-line, .dk-can-wrap { animation: none !important; opacity: 1 !important; transform: none !important; }
+      .dk-can-float, .dk-can-spin, .dk-can-sheen, .dk-can-shadow,
+      .dk-orb, .dk-flavor-hearts span, .dk-partner-can .pc-inner { animation: none !important; }
+      .dk-bubbles { display: none; }
+      .dk-feat, .dk-fact { transition: none; opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="drink-page">
+
+  <!-- ═══ NAVBAR (shared) ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="jeel wellness logo.svg" alt="Jeel Wellness" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="index.html#about" data-en="Why Jeel?" data-ar="لماذا جيل؟">Why Jeel?</a></li>
+        <li><a href="drink.html" data-en="Collagen Drink" data-ar="كولاجين درينك">Collagen Drink</a></li>
+        <li><a href="about.html" data-en="Our Story" data-ar="قصتنا">Our Story</a></li>
+        <li><a href="contact.html" data-en="Contact" data-ar="تواصل">Contact</a></li>
+        <li class="nav-cta-li">
+          <a href="https://store.jeelwellness.com" target="_blank" class="nav-store-btn" data-en="Shop Our Products" data-ar="تسوّق منتجاتنا">
+            Shop Our Products
+          </a>
+        </li>
+        <li class="nav-social-li" aria-label="Follow us">
+          <div class="nav-social-row">
+            <a href="https://www.instagram.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Facebook" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/jeelwellnessco/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.x.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="X / Twitter" class="nav-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-switcher" id="langSwitcher" aria-label="Switch language">
+          <span class="lang-thumb" aria-hidden="true"></span>
+          <span class="lang-en active">EN</span>
+          <span class="lang-ar">ع</span>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="dk-hero" id="drinkHero">
+    <div class="dk-hero-bg" aria-hidden="true"></div>
+    <div class="dk-bubbles" id="dkHeroBubbles" aria-hidden="true"></div>
+
+    <div class="dk-hero-inner">
+
+      <div class="dk-hero-copy">
+        <h1 class="dk-title dk-line l2">
+          <span data-lang="en">Jeel <span class="ab2-key">Collagen</span> Drink</span>
+          <span class="hidden" data-lang="ar">جيل <span class="ab2-key">كولاجين</span> درينك</span>
+        </h1>
+
+        <p class="dk-sub dk-line l3">
+          <span data-lang="en">15,000 mg of collagen peptides in a refreshing sparkling drink.</span>
+          <span class="hidden" data-lang="ar">مشروب فوّار منعش، وفي كل علبة 15,000 ملغ من ببتيدات الكولاجين.</span>
+        </p>
+
+        <p class="dk-flavor dk-line l4">
+          <span data-en="Tutti Frutti Flavor" data-ar="بنكهة توتي فروتي">Tutti Frutti Flavor</span>
+        </p>
+
+        <div class="dk-actions dk-line l5">
+          <a href="#dk-why" class="hero-cta" style="opacity:1;transform:none;" data-en="Discover the Drink" data-ar="اكتشف المشروب">Discover the Drink</a>
+          <a href="#dk-world" class="dk-btn-ghost" data-en="Why Jeel?" data-ar="لماذا جيل؟">Why Jeel?</a>
+        </div>
+      </div>
+
+      <div class="dk-hero-can">
+        <div class="dk-can-wrap" id="dkCan">
+          <div class="dk-can-shadow" aria-hidden="true"></div>
+          <div class="dk-can-float">
+            <div class="dk-can-spin">
+              <picture>
+                <source srcset="jeel-can.webp" type="image/webp" />
+                <img src="jeel-can.png" alt="Jeel Collagen Drink, Tutti Frutti, 15,000 mg collagen" class="dk-can-img" width="545" height="1400" draggable="false" />
+              </picture>
+              <div class="dk-can-sheen" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ WORLD FIRST — highest dose & the taste problem ═══ -->
+  <section class="dk-section dk-world" id="dk-world">
+    <div class="dk-bubbles" id="dkWorldBubbles" aria-hidden="true"></div>
+
+    <div class="dk-world-inner">
+
+      <div class="dk-section-head reveal" style="margin-bottom:clamp(36px,4.5vw,60px);">
+        <h2 class="dk-section-title">
+          <span data-lang="en">The World's Highest Dose.<br/><span class="ab2-key">And Finally, a Taste You Enjoy.</span></span>
+          <span class="hidden" data-lang="ar">أعلى جرعة في العالم.<br/><span class="ab2-key">وأخيرًا… بطعم تحبه.</span></span>
+        </h2>
+      </div>
+
+      <!-- the honest truth → the shift -->
+      <div class="dk-shift">
+        <div class="dk-shift-card dk-shift-before reveal">
+          <span class="dk-shift-tag" data-en="The usual story" data-ar="ما اعتدنا عليه">The usual story</span>
+          <p>
+            <span data-lang="en">Let's be honest: most collagen drinks are not something anyone looks forward to. Women and men drink them anyway, day after day, for glowing skin and everyday wellness. The routine works. The taste rarely does.</span>
+            <span class="hidden" data-lang="ar">لنكن صريحين: معظم مشروبات الكولاجين ليست شيئًا ينتظره أحد. ومع ذلك تشربها النساء والفتيات وكثيرون غيرهم يومًا بعد يوم، من أجل بشرة نضرة وصحة وعافية. الروتين ينجح، أما الطعم فنادرًا ما ينجح.</span>
+          </p>
+        </div>
+
+        <div class="dk-shift-arrow reveal" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="dk-shift-card dk-shift-after reveal">
+          <span class="dk-shift-tag dk-tag-blue" data-en="With Jeel" data-ar="مع جيل">With Jeel</span>
+          <p>
+            <span data-lang="en">Jeel Collagen Drink changes that. A bright, sparkling Tutti Frutti you actually want to open, carrying 15,000 mg, the highest collagen dose in a ready-to-drink can anywhere in the world.</span>
+            <span class="hidden" data-lang="ar">جيل كولاجين درينك يغيّر هذه القاعدة. توتي فروتي فوّار ومنعش تفتحه لأنك تشتهيه فعلًا، ويحمل 15,000 ملغ، وهي أعلى جرعة كولاجين في علبة جاهزة للشرب في العالم.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- dose comparison -->
+      <div class="dk-compare reveal">
+        <div class="dk-bar-row">
+          <span class="dk-bar-label" data-en="Typical collagen drinks" data-ar="مشروبات الكولاجين المعتادة">Typical collagen drinks</span>
+          <div class="dk-bar-track"><div class="dk-bar-fill dk-bar-them" data-w="33%"></div></div>
+          <span class="dk-bar-val" data-en="2,500 to 5,000 mg" data-ar="2,500 إلى 5,000 ملغ">2,500 to 5,000 mg</span>
+        </div>
+        <div class="dk-bar-row">
+          <span class="dk-bar-label dk-bar-label-us">Jeel Collagen Drink</span>
+          <div class="dk-bar-track"><div class="dk-bar-fill dk-bar-us" data-w="100%"></div></div>
+          <span class="dk-bar-val dk-bar-val-us" data-en="15,000 mg" data-ar="15,000 ملغ">15,000 mg</span>
+        </div>
+        <p class="dk-compare-note">
+          <span data-lang="en">Up to six times the collagen of a typical ready-to-drink can, in one 330 mL serving.</span>
+          <span class="hidden" data-lang="ar">تصل إلى ستة أضعاف الكولاجين في العلبة الجاهزة المعتادة، وكل ذلك في حصة واحدة سعتها 330 مل.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ WHY JEEL ═══ -->
+  <section class="dk-section dk-features" id="dk-why">
+    <div class="dk-section-head reveal">
+      <h2 class="dk-section-title">
+        <span data-lang="en">Why Jeel Collagen Drink Is <span class="ab2-key">an Asset to Your Market</span></span>
+        <span class="hidden" data-lang="ar">لماذا يشكّل جيل كولاجين درينك <span class="ab2-key">إضافة وميزة لأسواقكم</span></span>
+      </h2>
+      <p class="dk-section-sub">
+        <span data-lang="en">The world's highest collagen dose per can, in a drink people finish because they enjoy it.</span>
+        <span class="hidden" data-lang="ar">أعلى جرعة كولاجين في العالم داخل علبة واحدة، في مشروب يُشرب حتى آخر رشفة لأن طعمه يستحق.</span>
+      </p>
+    </div>
+
+    <div class="dk-feat-layout">
+
+      <div class="dk-sticky-can" aria-hidden="true">
+        <div class="dk-sticky-can-inner" id="dkStickyCan">
+          <img src="jeel-can.webp" alt="" loading="lazy" draggable="false" />
+        </div>
+      </div>
+
+      <div class="dk-feat-list">
+
+        <article class="dk-feat" data-fx="left">
+          <h3>
+            <span data-lang="en">15,000 mg Collagen Peptides</span>
+            <span class="hidden" data-lang="ar">15,000 ملغ من ببتيدات الكولاجين</span>
+          </h3>
+          <p>
+            <span data-lang="en">A generous daily serving of high-quality collagen peptides in a refreshing drink that is easy to enjoy.</span>
+            <span class="hidden" data-lang="ar">جرعة يومية سخية من الكولاجين عالي الجودة، بطعم منعش يجعل الاستمرار عليها أمرًا سهلًا وممتعًا.</span>
+          </p>
+        </article>
+
+        <article class="dk-feat" data-fx="right">
+          <h3>
+            <span data-lang="en">A Flavor You Will Actually Enjoy</span>
+            <span class="hidden" data-lang="ar">نكهة تحب أن تعود إليها</span>
+          </h3>
+          <p>
+            <span data-lang="en">A bright Tutti Frutti flavor with a refreshing sparkling finish.</span>
+            <span class="hidden" data-lang="ar">نكهة توتي فروتي مشرقة، مع لمسة فوارة خفيفة تجعل كل رشفة أجمل من سابقتها.</span>
+          </p>
+        </article>
+
+        <article class="dk-feat" data-fx="rise">
+          <h3>
+            <span data-lang="en">Zero Added Sugar and Low in Calories</span>
+            <span class="hidden" data-lang="ar">من دون سكر مضاف وسعرات منخفضة</span>
+          </h3>
+          <p>
+            <span data-lang="en">A light, refreshing choice with no added sugar and only 20 calories per can.</span>
+            <span class="hidden" data-lang="ar">خيار خفيف يناسب يومك، بلا سكر مضاف وبعشرين سعرة حرارية فقط في العلبة.</span>
+          </p>
+        </article>
+
+        <article class="dk-feat" data-fx="scale">
+          <h3>
+            <span data-lang="en">Strong Value for Distributors</span>
+            <span class="hidden" data-lang="ar">قيمة تجارية قوية للموزعين</span>
+          </h3>
+          <p>
+            <span data-lang="en">A distinctive wellness product with attractive positioning and competitive commercial value.</span>
+            <span class="hidden" data-lang="ar">منتج عناية مميز يجمع بين حضور جذاب على الرف وقيمة تجارية تنافسية تفتح آفاقًا واعدة للموزعين.</span>
+          </p>
+        </article>
+
+        <article class="dk-feat" data-fx="left">
+          <h3>
+            <span data-lang="en">A Global Identity with Local Relevance</span>
+            <span class="hidden" data-lang="ar">هوية عالمية بروح قريبة من السوق</span>
+          </h3>
+          <p>
+            <span data-lang="en">A strong international brand experience with adaptable language and market-ready communication.</span>
+            <span class="hidden" data-lang="ar">حضور عالمي للعلامة، مع محتوى ولغة يتكيفان بسهولة مع طبيعة كل سوق وجمهوره.</span>
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section class="dk-section dk-exp" id="dk-experience">
+    <div class="dk-orb dk-orb-1" aria-hidden="true"></div>
+    <div class="dk-orb dk-orb-2" aria-hidden="true"></div>
+    <div class="dk-orb dk-orb-3" aria-hidden="true"></div>
+    <div class="dk-bubbles" id="dkExpBubbles" aria-hidden="true"></div>
+
+    <div class="dk-exp-inner">
+      <div class="dk-section-head reveal" style="margin-bottom:0;">
+        <h2 class="dk-section-title">
+          <span data-lang="en">More Than Collagen.<br/><span class="ab2-key">A Drink You Look Forward To.</span></span>
+          <span class="hidden" data-lang="ar">أكثر من كولاجين.<br/><span class="ab2-key">مشروب تنتظره كل يوم.</span></span>
+        </h2>
+        <p class="dk-section-sub">
+          <span data-lang="en">Light, sparkling and full of flavor. Jeel turns your daily collagen routine into a refreshing moment you can genuinely enjoy.</span>
+          <span class="hidden" data-lang="ar">خفيف وفوّار ومليء بالنكهة. مع جيل، يتحول روتين الكولاجين اليومي إلى لحظة منعشة تنتظرها فعلًا كل يوم.</span>
+        </p>
+      </div>
+
+      <div class="reveal">
+        <span class="dk-counter" id="dkCounter" data-target="15000">0</span>
+        <p class="dk-counter-label" data-en="mg Collagen Peptides Per Can" data-ar="ملغ من ببتيدات الكولاجين في كل علبة">mg Collagen Peptides Per Can</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUICK FACTS ═══ -->
+  <section class="dk-section dk-facts" aria-label="Product facts">
+    <div class="dk-facts-grid">
+      <div class="dk-fact">
+        <span class="dk-fact-value" data-en="15,000 mg" data-ar="15,000 ملغ">15,000 mg</span>
+        <span class="dk-fact-label" data-en="Collagen Peptides" data-ar="ببتيدات الكولاجين">Collagen Peptides</span>
+      </div>
+      <div class="dk-fact">
+        <span class="dk-fact-value">Tutti Frutti</span>
+        <span class="dk-fact-label" data-en="Flavor" data-ar="النكهة">Flavor</span>
+      </div>
+      <div class="dk-fact">
+        <span class="dk-fact-value">0</span>
+        <span class="dk-fact-label" data-en="Added Sugar" data-ar="سكر مضاف">Added Sugar</span>
+      </div>
+      <div class="dk-fact">
+        <span class="dk-fact-value">20</span>
+        <span class="dk-fact-label" data-en="Calories Per Serving" data-ar="سعرة حرارية في كل حصة">Calories Per Serving</span>
+      </div>
+      <div class="dk-fact">
+        <span class="dk-fact-value" data-en="330 mL" data-ar="330 مل">330 mL</span>
+        <span class="dk-fact-label" data-en="Per Can" data-ar="حجم العلبة">Per Can</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PARTNER CTA ═══ -->
+  <section class="dk-section dk-partner" id="dk-partner">
+    <div class="dk-partner-inner">
+
+      <div class="dk-partner-can reveal" aria-hidden="true">
+        <div class="pc-inner">
+          <img src="jeel-can.webp" alt="" loading="lazy" draggable="false" />
+        </div>
+      </div>
+
+      <div class="dk-partner-copy reveal">
+        <h2 class="dk-section-title">
+          <span data-lang="en">Bring Jeel to <span class="ab2-key">Your Market</span></span>
+          <span class="hidden" data-lang="ar">أحضر جيل إلى <span class="ab2-key">سوقك</span></span>
+        </h2>
+        <p class="dk-section-sub">
+          <span data-lang="en">Interested in distributing Jeel Collagen Drink? Let us start the conversation.</span>
+          <span class="hidden" data-lang="ar">مهتم بتوزيع جيل كولاجين درينك في سوقك؟ يسعدنا أن نسمع منك ونبدأ الحديث.</span>
+        </p>
+        <a href="contact.html" class="hero-cta" style="opacity:1;transform:none;" data-en="Become a Partner" data-ar="كن شريكاً">Become a Partner</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER (shared) ═══ -->
+  <footer class="footer">
+    <span class="footer-leaf footer-leaf-1" aria-hidden="true"><img src="leaf-blue.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-2" aria-hidden="true"><img src="leaf-pink.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-3" aria-hidden="true"><img src="leaf-yellow.svg" alt=""></span>
+    <span class="footer-leaf footer-leaf-4" aria-hidden="true"><img src="leaf-blue.svg" alt=""></span>
+
+    <div class="footer-inner">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="jeel wellness logo.svg" alt="Jeel Wellness" class="footer-logo" />
+        </div>
+
+        <div class="footer-social">
+          <a href="https://www.instagram.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/jeelwellnessco/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.x.com/jeelwellnessCo" target="_blank" rel="noopener" aria-label="X / Twitter" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-mid">
+        <div class="footer-contact-info">
+          <span class="footer-contact-label" data-en="For international inquiries and distribution partnerships" data-ar="للتواصل من جميع أنحاء العالم عبر الرقم التالي">For international inquiries and distribution partnerships</span>
+          <a href="tel:+00962777700018" class="footer-phone">+00962 777 700 018</a>
+        </div>
+        <div class="footer-payment">
+          <img src="payment methods.svg" alt="Accepted payment methods" class="payment-img" />
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" data-en="© 2026 Jeel Wellness. All rights reserved." data-ar="© ٢٠٢٦ جيل ويلنس. جميع الحقوق محفوظة.">© 2026 Jeel Wellness. All rights reserved.</p>
+        <a href="https://store.jeelwellness.com" target="_blank" class="footer-store-link" data-en="Visit Store →" data-ar="زيارة المتجر →">Visit Store →</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+  <script defer>
+    (function () {
+      'use strict';
+
+      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var isTouch = window.matchMedia('(hover: none)').matches;
+      var isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+      /* ── sparkling bubbles ── */
+      function spawnBubbles(containerId, count) {
+        var box = document.getElementById(containerId);
+        if (!box || reducedMotion) return;
+        for (var i = 0; i < count; i++) {
+          var s = document.createElement('span');
+          var size = 4 + Math.random() * 9;
+          s.style.left = (Math.random() * 100).toFixed(1) + '%';
+          s.style.width = size + 'px';
+          s.style.height = size + 'px';
+          s.style.setProperty('--d', (7 + Math.random() * 7).toFixed(1) + 's');
+          s.style.setProperty('--dl', (Math.random() * 9).toFixed(1) + 's');
+          s.style.setProperty('--dx', ((Math.random() - 0.5) * 46).toFixed(0) + 'px');
+          s.style.setProperty('--h', (45 + Math.random() * 40).toFixed(0) + 'vh');
+          s.style.setProperty('--o', (0.30 + Math.random() * 0.30).toFixed(2));
+          box.appendChild(s);
+        }
+      }
+
+      /* ── cursor tilt on the hero can ── */
+      function initCanTilt() {
+        var can = document.getElementById('dkCan');
+        var hero = document.getElementById('drinkHero');
+        if (!can || !hero || isTouch || reducedMotion) return;
+        var raf = null;
+        hero.addEventListener('mousemove', function (e) {
+          if (raf) return;
+          raf = requestAnimationFrame(function () {
+            var r = hero.getBoundingClientRect();
+            var px = (e.clientX - r.left) / r.width - 0.5;
+            var py = (e.clientY - r.top) / r.height - 0.5;
+            can.style.setProperty('--rx', (py * -7).toFixed(2) + 'deg');
+            can.style.setProperty('--ry', (px * 10).toFixed(2) + 'deg');
+            raf = null;
+          });
+        });
+        hero.addEventListener('mouseleave', function () {
+          can.style.setProperty('--rx', '0deg');
+          can.style.setProperty('--ry', '0deg');
+        });
+      }
+
+      /* ── cursor glow + subtle tilt on feature cards ── */
+      function initCardInteract() {
+        if (isTouch || reducedMotion) return;
+        var cards = document.querySelectorAll('.dk-feat');
+        cards.forEach(function (card) {
+          var raf = null;
+          card.addEventListener('mousemove', function (e) {
+            if (raf) return;
+            raf = requestAnimationFrame(function () {
+              var r = card.getBoundingClientRect();
+              var px = (e.clientX - r.left) / r.width;
+              var py = (e.clientY - r.top) / r.height;
+              card.style.setProperty('--fmx', (px * 100).toFixed(1) + '%');
+              card.style.setProperty('--fmy', (py * 100).toFixed(1) + '%');
+              card.style.setProperty('--frx', ((py - 0.5) * -3.5).toFixed(2) + 'deg');
+              card.style.setProperty('--fry', ((px - 0.5) * 5).toFixed(2) + 'deg');
+              raf = null;
+            });
+          });
+          card.addEventListener('mouseleave', function () {
+            card.style.setProperty('--frx', '0deg');
+            card.style.setProperty('--fry', '0deg');
+          });
+        });
+      }
+
+      /* ── dose comparison bars ── */
+      function initBars() {
+        var box = document.querySelector('.dk-compare');
+        if (!box) return;
+        var fills = box.querySelectorAll('.dk-bar-fill');
+        if (reducedMotion) {
+          box.classList.add('visible');
+          fills.forEach(function (f) { f.style.width = f.getAttribute('data-w'); });
+          return;
+        }
+        var obs = new IntersectionObserver(function (entries) {
+          if (!entries[0].isIntersecting) return;
+          obs.disconnect();
+          box.classList.add('visible');
+          setTimeout(function () {
+            fills.forEach(function (f) { f.style.width = f.getAttribute('data-w'); });
+          }, 200);
+        }, { threshold: 0.35 });
+        obs.observe(box);
+      }
+
+      /* ── scroll-reveal for features & facts ── */
+      function initDkReveal() {
+        var items = document.querySelectorAll('.dk-feat, .dk-fact, .dk-shift-card, .dk-shift-arrow');
+        if (!items.length) return;
+        if (reducedMotion) { items.forEach(function (el) { el.classList.add('visible'); }); return; }
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var el = entry.target;
+            var siblings = Array.prototype.slice.call(el.parentElement.children);
+            var idx = siblings.indexOf(el);
+            setTimeout(function () { el.classList.add('visible'); }, (idx % 5) * 110);
+            obs.unobserve(el);
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        items.forEach(function (el) { obs.observe(el); });
+      }
+
+      /* ── 15,000 counter ── */
+      function initCounter() {
+        var el = document.getElementById('dkCounter');
+        if (!el) return;
+        var target = parseInt(el.getAttribute('data-target'), 10) || 15000;
+        if (reducedMotion) { el.textContent = target.toLocaleString('en-US'); return; }
+        var done = false;
+        var obs = new IntersectionObserver(function (entries) {
+          if (!entries[0].isIntersecting || done) return;
+          done = true;
+          obs.disconnect();
+          var start = null, dur = 1700;
+          function step(ts) {
+            if (!start) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 4);
+            el.textContent = Math.round(target * eased).toLocaleString('en-US');
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }, { threshold: 0.5 });
+        obs.observe(el);
+      }
+
+      /* ── scroll story (GSAP if available) ── */
+      function initScrollStory() {
+        if (reducedMotion || !window.gsap || !window.ScrollTrigger) return;
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1 · can grows slightly and drifts as you leave the hero
+        gsap.to('.dk-hero-can', {
+          scale: 1.07,
+          yPercent: 8,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#drinkHero',
+            start: 'top top',
+            end: 'bottom 40%',
+            scrub: 1.2
+          }
+        });
+
+        // 2 · sticky can rotates gently through the features
+        if (!isMobile) {
+          gsap.fromTo('#dkStickyCan',
+            { rotation: -6, rotationY: -18 },
+            {
+              rotation: 6,
+              rotationY: 18,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: '.dk-features',
+                start: 'top 60%',
+                end: 'bottom 30%',
+                scrub: 1.4
+              }
+            });
+        }
+
+        // 3 · experience orbs parallax
+        gsap.to('.dk-orb-1', { yPercent: -28, ease: 'none',
+          scrollTrigger: { trigger: '.dk-exp', start: 'top bottom', end: 'bottom top', scrub: 1.6 } });
+        gsap.to('.dk-orb-2', { yPercent: 24, ease: 'none',
+          scrollTrigger: { trigger: '.dk-exp', start: 'top bottom', end: 'bottom top', scrub: 1.6 } });
+
+        // 4 · partner can re-enters with presence
+        gsap.from('.dk-partner-can .pc-inner', {
+          y: 70, rotation: -10, opacity: 0,
+          duration: 1.1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.dk-partner', start: 'top 72%' }
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        spawnBubbles('dkHeroBubbles', isMobile ? 8 : 16);
+        spawnBubbles('dkExpBubbles', isMobile ? 6 : 12);
+        spawnBubbles('dkWorldBubbles', isMobile ? 5 : 10);
+        initCanTilt();
+        initCardInteract();
+        initDkReveal();
+        initBars();
+        initCounter();
+      });
+
+      // GSAP loads deferred — wait for full load
+      window.addEventListener('load', initScrollStory);
+    })();
+  </script>
+
+</body>
+</html>

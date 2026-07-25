@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAssetProtection();
   initAboutFx();
   initMomentsCarousel();
+  initDrinkBubbles();
   initReveal();
   initCollagenReveal();
   initVideoStrip();
@@ -526,25 +527,57 @@ function initAboutFx() {
    Keeps text selection and all interactions intact.
 ══════════════════════════════════════════════════════ */
 function initAssetProtection() {
-  const guarded = t =>
-    t instanceof Element &&
-    t.closest('img, video, svg, picture, .mo-slide, .video-card, .globe-canvas');
+  const GUARD_SEL = [
+    'img', 'video', 'svg', 'picture', 'canvas', 'source',
+    '.mo-slide', '.video-card', '.globe-canvas', '.globe-stage',
+    // collagen drink assets (home section + drink page)
+    '.hd-can', '.hd-visual',
+    '.dk-can-wrap', '.dk-hero-can', '.dk-sticky-can', '.dk-partner-can'
+  ].join(', ');
 
-  ['contextmenu', 'dragstart'].forEach(evt => {
+  const guarded = t => t instanceof Element && t.closest(GUARD_SEL);
+
+  // right-click menu, drag-out, and text/image selection
+  ['contextmenu', 'dragstart', 'drop', 'selectstart'].forEach(evt => {
     document.addEventListener(evt, e => {
       if (guarded(e.target)) e.preventDefault();
-    });
-  });
-  document.addEventListener('selectstart', e => {
-    if (guarded(e.target)) e.preventDefault();
+    }, { capture: true });
   });
 
+  // middle-click / ctrl+click "open in new tab" on a guarded asset
+  document.addEventListener('auxclick', e => {
+    if (e.button === 1 && guarded(e.target)) e.preventDefault();
+  }, { capture: true });
+
+  // long-press on touch devices (iOS/Android save sheet)
+  let pressTimer = null;
+  document.addEventListener('touchstart', e => {
+    if (!guarded(e.target)) return;
+    pressTimer = setTimeout(() => {
+      if (e.cancelable) e.preventDefault();
+    }, 380);
+  }, { passive: true, capture: true });
+  ['touchend', 'touchmove', 'touchcancel'].forEach(evt => {
+    document.addEventListener(evt, () => clearTimeout(pressTimer), { passive: true });
+  });
+
+  // harden every media element that exists on the page
   document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
+    img.style.webkitUserDrag = 'none';
+  });
+  document.querySelectorAll('picture source, source').forEach(s => {
+    s.setAttribute('draggable', 'false');
   });
   document.querySelectorAll('video').forEach(v => {
-    v.setAttribute('controlslist', 'nodownload noremoteplayback');
+    v.setAttribute('controlslist', 'nodownload noremoteplayback noplaybackrate');
     v.setAttribute('disablepictureinpicture', '');
+    v.setAttribute('disableremoteplayback', '');
+    v.removeAttribute('controls');
+  });
+  document.querySelectorAll('svg').forEach(s => {
+    s.setAttribute('draggable', 'false');
+    s.style.pointerEvents = s.closest('a, button') ? '' : 'none';
   });
 }
 
@@ -638,6 +671,29 @@ function initMomentsCarousel() {
   restart();
   // re-layout once images have dimensions
   window.addEventListener('load', layout);
+}
+
+/* ══════════════════════════════════════════════════════
+   HOME — collagen drink bubbles
+══════════════════════════════════════════════════════ */
+function initDrinkBubbles() {
+  const box = document.getElementById('hdBubbles');
+  if (!box) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const count = window.matchMedia('(max-width: 900px)').matches ? 6 : 12;
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('span');
+    const size = 4 + Math.random() * 9;
+    s.style.left   = (Math.random() * 100).toFixed(1) + '%';
+    s.style.width  = size + 'px';
+    s.style.height = size + 'px';
+    s.style.setProperty('--d',  (7 + Math.random() * 7).toFixed(1) + 's');
+    s.style.setProperty('--dl', (Math.random() * 9).toFixed(1) + 's');
+    s.style.setProperty('--dx', ((Math.random() - 0.5) * 44).toFixed(0) + 'px');
+    s.style.setProperty('--h',  (40 + Math.random() * 35).toFixed(0) + 'vh');
+    s.style.setProperty('--o',  (0.28 + Math.random() * 0.28).toFixed(2));
+    box.appendChild(s);
+  }
 }
 
 /* ══════════════════════════════════════════════════════
