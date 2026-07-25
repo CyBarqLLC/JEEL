@@ -3930,7 +3930,7 @@ img, video, svg, picture {
 /* can + floating badge */
 .hd-visual { position: relative; display: flex; justify-content: center; }
 .hd-can { width: clamp(180px, 20vw, 280px); animation: hdFloat 7s ease-in-out infinite; }
-.hd-can img { width: 100%; height: auto; display: block; filter: drop-shadow(0 26px 48px rgba(90,150,175,0.26)); }
+.hd-can img { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 50px rgba(90,150,175,0.28)); }
 @keyframes hdFloat {
   0%, 100% { transform: translateY(0)     rotate(-0.6deg); }
   50%      { transform: translateY(-16px) rotate(0.6deg); }

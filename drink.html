@@ -265,7 +265,7 @@
       padding: 20px 0 60px;
     }
     .dk-sticky-can-inner { width: clamp(180px, 17vw, 250px); will-change: transform; }
-    .dk-sticky-can-inner img { width: 100%; display: block; filter: drop-shadow(0 24px 44px rgba(90,150,175,0.25)); }
+    .dk-sticky-can-inner img { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 50px rgba(90,150,175,0.28)); }
 
     .dk-feat {
       position: relative;
@@ -565,7 +565,7 @@
       width: clamp(170px, 17vw, 240px);
       animation: dkFloat 7s ease-in-out infinite;
     }
-    .dk-partner-can img { width: 100%; display: block; filter: drop-shadow(0 26px 46px rgba(90,150,175,0.26)); }
+    .dk-partner-can img { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 50px rgba(90,150,175,0.28)); }
     .dk-partner-copy { text-align: start; }
     .dk-partner-copy .dk-section-title { margin-bottom: clamp(12px, 1.6vw, 18px); }
     .dk-partner-copy .dk-section-sub { margin: 0 0 clamp(24px, 3vw, 38px); }
@@ -772,7 +772,10 @@
 
       <div class="dk-sticky-can" aria-hidden="true">
         <div class="dk-sticky-can-inner" id="dkStickyCan">
-          <img src="jeel-can.webp" alt="" loading="lazy" draggable="false" />
+          <picture>
+            <source srcset="jeel-can.webp" type="image/webp" />
+            <img src="jeel-can.png" alt="" class="dk-can-img" width="545" height="1400" loading="lazy" draggable="false" />
+          </picture>
         </div>
       </div>
 
@@ -895,7 +898,10 @@
 
       <div class="dk-partner-can reveal" aria-hidden="true">
         <div class="pc-inner">
-          <img src="jeel-can.webp" alt="" loading="lazy" draggable="false" />
+          <picture>
+            <source srcset="jeel-can.webp" type="image/webp" />
+            <img src="jeel-can.png" alt="" class="dk-can-img" width="545" height="1400" loading="lazy" draggable="false" />
+          </picture>
         </div>
       </div>
 
