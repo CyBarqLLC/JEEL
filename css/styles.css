@@ -3930,7 +3930,12 @@ img, video, svg, picture {
 /* can + floating badge */
 .hd-visual { position: relative; display: flex; justify-content: center; }
 .hd-can { width: clamp(180px, 20vw, 280px); animation: hdFloat 7s ease-in-out infinite; }
-.hd-can img { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 50px rgba(90,150,175,0.28)); }
+.hd-can img {
+  width: 100%; height: auto; display: block;
+  /* shadow scaled to the can size so it grounds the product
+     instead of blooming into a visible box behind it */
+  filter: drop-shadow(0 14px 22px rgba(90,150,175,0.22));
+}
 @keyframes hdFloat {
   0%, 100% { transform: translateY(0)     rotate(-0.6deg); }
   50%      { transform: translateY(-16px) rotate(0.6deg); }
