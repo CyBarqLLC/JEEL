@@ -4,50 +4,31 @@
 ═══════════════════════════════════════════════════════ */
 
 /* ── Fonts ── */
+/* Thmanyah Sans — one typeface for English and Arabic */
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('../CabinetGrotesk-Light.otf') format('opentype');
+  font-family: 'Thmanyah Sans';
+  src: url('../fonts/thmanyahsans-Light.otf') format('opentype');
   font-weight: 300; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('../CabinetGrotesk-Regular.otf') format('opentype');
+  font-family: 'Thmanyah Sans';
+  src: url('../fonts/thmanyahsans-Regular.otf') format('opentype');
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('../CabinetGrotesk-Medium.otf') format('opentype');
+  font-family: 'Thmanyah Sans';
+  src: url('../fonts/thmanyahsans-Medium.otf') format('opentype');
   font-weight: 500; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('../CabinetGrotesk-Bold.otf') format('opentype');
-  font-weight: 700; font-style: normal; font-display: swap;
+  font-family: 'Thmanyah Sans';
+  src: url('../fonts/thmanyahsans-Bold.otf') format('opentype');
+  font-weight: 600 700; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('../CabinetGrotesk-Extrabold.otf') format('opentype');
-  font-weight: 800; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: 'ZagelArabic';
-  src: url('../ZagelArabicITF-Light.otf') format('opentype');
-  font-weight: 300; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: 'ZagelArabic';
-  src: url('../ZagelArabicITF-Regular.otf') format('opentype');
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: 'ZagelArabic';
-  src: url('../ZagelArabicITF-Medium.otf') format('opentype');
-  font-weight: 500; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: 'ZagelArabic';
-  src: url('../ZagelArabicITF-Bold.otf') format('opentype');
-  font-weight: 700; font-style: normal; font-display: swap;
+  font-family: 'Thmanyah Sans';
+  src: url('../fonts/thmanyahsans-Black.otf') format('opentype');
+  font-weight: 800 900; font-style: normal; font-display: swap;
 }
 
 /* ── Variables ── */
@@ -58,8 +39,8 @@
   --c-bg-soft:    #f1eee3;
   --c-white:      #ffffff;
   --c-black:      #000000;
-  --font-en:      'CabinetGrotesk', system-ui, sans-serif;
-  --font-ar:      'ZagelArabic', 'CabinetGrotesk', sans-serif;
+  --font-en:      'Thmanyah Sans', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+  --font-ar:      'Thmanyah Sans', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
 
   /* ── Unified typography system ──
      Change these once — every section title/subtitle follows. */
